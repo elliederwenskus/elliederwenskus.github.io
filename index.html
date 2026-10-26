@@ -1,0 +1,1799 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>Ellie Derwenskus — Portfolio</title>
+<meta name="description" content="Ellie Derwenskus — portfolio in two sections: the school portfolio (Syracuse, 2018–2023) and professional work samples from HKS and James Maynard Architect (June 2026). Every distinct image shown whole — each artwork, board and diagram kept together as one piece." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700;1,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#fbfaf6;
+    --ink:#262219;
+    --ink-soft:#55503f;
+    --grey:#8d8776;
+    --faint:#b9b2a0;
+    --line:#e4dfd0;
+    --rust:#b0511f;
+    --rust-soft:#c97e4e;
+    --garden:#43744f;
+    --wash:#f3f0e6;
+    --lb-bg:rgba(18,17,13,.97);
+    --lb-ink:#f2eee1;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#171612;
+      --ink:#ede8da;
+      --ink-soft:#c6c0ae;
+      --grey:#9a937f;
+      --faint:#6d675a;
+      --line:#33312a;
+      --rust:#dd8a4e;
+      --rust-soft:#c97e4e;
+      --garden:#9dc48f;
+      --wash:#201e19;
+    }
+  }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  a{ color:var(--rust); }
+  button{ font-family:inherit; cursor:pointer; }
+  img{ display:block; max-width:100%; }
+  .mono{ font-family:"IBM Plex Mono", ui-monospace, monospace; }
+
+  /* ---------- thin header ---------- */
+  .topbar{
+    position:sticky; top:0; z-index:50;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+    padding:13px clamp(18px,5vw,56px);
+    background:color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar .name{
+    font-size:12.5px; font-weight:700; letter-spacing:.34em; text-transform:uppercase;
+    color:var(--ink); text-decoration:none; white-space:nowrap;
+  }
+  .topbar .icons{ display:flex; align-items:center; gap:6px; position:relative; }
+  .topbar .icons a{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:34px; height:34px; border-radius:50%; color:var(--ink-soft); text-decoration:none;
+  }
+  .topbar .icons a:hover{ color:var(--rust); background:var(--wash); }
+  .topbar .icons svg{ width:17px; height:17px; fill:currentColor; }
+  /* email reveal: the envelope toggles this panel, so the address is
+     visible (and copyable) even where a mailto: click does nothing */
+  .mailpop{
+    position:absolute; right:0; top:calc(100% + 12px); z-index:60;
+    display:flex; align-items:center; gap:12px;
+    background:var(--bg); border:1px solid var(--line);
+    padding:10px 14px; box-shadow:0 8px 24px rgba(20,18,12,.14);
+  }
+  .topbar .icons .mailpop .mailaddr{
+    font-size:13.5px; color:var(--ink); text-decoration:none; white-space:nowrap;
+    width:auto; height:auto; border-radius:0; padding:2px 0;
+  }
+  .topbar .icons .mailpop .mailaddr:hover{ color:var(--rust); background:none; text-decoration:underline; }
+  .mailpop .mailcopy{
+    background:none; border:1px solid var(--line); border-radius:999px;
+    color:var(--ink-soft); font-size:12px; font-weight:700;
+    letter-spacing:.08em; text-transform:uppercase; padding:6px 13px; white-space:nowrap;
+  }
+  .mailpop .mailcopy:hover{ border-color:var(--rust); color:var(--rust); }
+
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 clamp(18px,5vw,56px); }
+  .wrap-wide{ max-width:1560px; margin:0 auto; padding:0 clamp(18px,4vw,56px); }
+
+  /* ---------- category index ---------- */
+  .cat{ padding:clamp(44px,7vw,84px) 0 clamp(10px,2vw,20px); }
+  .eyebrow{
+    margin:0 0 10px; font-size:12px; font-weight:700; letter-spacing:.3em;
+    text-transform:uppercase; color:var(--rust);
+  }
+  .cat h2{
+    margin:0 0 8px; font-size:clamp(52px,9vw,104px); line-height:.95;
+    font-weight:800; font-style:italic; letter-spacing:-.02em; text-transform:lowercase;
+  }
+  .cat .intro{ margin:0 0 8px; font-style:italic; color:var(--grey); font-size:clamp(15px,2vw,18px); max-width:56ch; }
+  .cat .countline{ margin:0 0 34px; font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:var(--faint); }
+
+  .pgrid{ display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(20px,3vw,40px) clamp(16px,2.4vw,32px); padding-bottom:clamp(30px,4vw,48px); }
+  @media (min-width:1500px){ .pgrid{ grid-template-columns:repeat(3,1fr); } }
+  .pcard{ background:none; border:0; padding:0; text-align:center; color:inherit; width:100%; }
+  /* INDEX ONLY exception (author's explicit request): the square
+     index thumbnail is FILLED by the image — a centred cover crop,
+     like the Izumo and Mala index images already read — with no
+     letterbox bands. This applies to index cards only: project
+     spreads, opening heroes and the lightbox still show every
+     image whole, fitted, uncropped and never upscaled. */
+  .pcard .imgbox{ display:flex; align-items:center; justify-content:center; overflow:hidden; background:var(--wash); aspect-ratio:1/1; padding:0; box-sizing:border-box; }
+  .pcard .imgbox img{ width:100%; height:100%; max-width:none; max-height:none; object-fit:cover; object-position:center; margin:0; }
+  .pcard .num{ margin:14px 0 2px; font-size:clamp(30px,3.4vw,42px); font-weight:800; line-height:1; color:var(--ink); }
+  .pcard:hover .num, .pcard:focus-visible .num{ color:var(--rust); }
+  .pcard .cap{ margin:0 auto; font-style:italic; color:var(--grey); font-size:14px; max-width:30ch; }
+  .pcard .cap b{ color:var(--ink-soft); font-weight:600; }
+  .pnote{ text-align:center; padding:10px 6px 0; }
+  .pnote .num{ margin:0 0 2px; font-size:clamp(30px,3.4vw,42px); font-weight:800; line-height:1; color:var(--faint); }
+  .pnote .cap{ margin:0 auto; font-style:italic; color:var(--grey); font-size:14px; max-width:32ch; }
+
+  .rule{ border:0; border-top:1px solid var(--line); margin:0; }
+
+  /* ---------- section switcher ---------- */
+  .secswitch{
+    display:grid; grid-template-columns:1fr 1fr; margin-top:26px;
+    border:1px solid var(--line); background:var(--bg);
+  }
+  .sectab{
+    background:none; border:0; text-align:left; padding:16px 20px 18px; color:var(--grey);
+  }
+  .sectab + .sectab{ border-left:1px solid var(--line); }
+  .sectab .st-k{
+    display:block; font-family:"IBM Plex Mono",monospace; font-size:11px; font-weight:500;
+    letter-spacing:.24em; text-transform:uppercase; color:var(--faint); margin-bottom:5px;
+  }
+  .sectab .st-t{ display:block; font-size:clamp(21px,3vw,29px); font-weight:800; font-style:italic; line-height:1.05; }
+  .sectab .st-s{ display:block; font-size:12.5px; font-style:italic; margin-top:4px; }
+  .sectab:hover{ color:var(--ink); }
+  .sectab[aria-pressed="true"]{ color:var(--ink); background:var(--wash); box-shadow:inset 0 -3px 0 var(--rust); }
+  .sectab[aria-pressed="true"] .st-k{ color:var(--rust); }
+  @media (max-width:560px){
+    .secswitch{ grid-template-columns:1fr; }
+    .sectab + .sectab{ border-left:0; border-top:1px solid var(--line); }
+  }
+  .pcard .cardnote{
+    display:block; margin-top:6px; font-style:normal; font-weight:700;
+    font-size:12px; line-height:1.45; color:var(--rust);
+  }
+
+  /* ---------- work-sample opening details & disclaimers ---------- */
+  .details{ margin:0 0 18px; border-top:1px solid var(--line); }
+  .details > div{
+    display:grid; grid-template-columns:118px 1fr; gap:10px;
+    padding:6px 0; border-bottom:1px solid var(--line);
+  }
+  .details dt{
+    font-family:"IBM Plex Mono",monospace; font-size:11px; font-weight:500;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--rust); padding-top:3px;
+  }
+  .details dd{ margin:0; font-size:14px; font-weight:600; color:var(--ink-soft); }
+  .disclaimer{
+    margin:2px 0 18px; border:1.5px solid var(--rust); color:var(--rust);
+    font-weight:700; font-size:15px; line-height:1.5; padding:12px 16px;
+  }
+  .fig-note{
+    display:block; margin-top:3px; font-style:normal; font-weight:700;
+    font-size:12px; line-height:1.45; color:var(--rust);
+  }
+  .disc-line{
+    display:block; margin:0 auto 7px; max-width:62ch; text-align:center;
+    font-style:normal; font-weight:700; color:var(--rust); font-size:13.5px; line-height:1.5;
+  }
+
+  /* ---------- about ---------- */
+  .about{ padding:clamp(34px,5vw,56px) 0 clamp(44px,6vw,64px); display:grid; grid-template-columns:1fr 1fr; gap:clamp(20px,4vw,56px); }
+  .about h3{ margin:0 0 10px; font-size:20px; font-style:italic; font-weight:700; }
+  .about p{ margin:0 0 12px; color:var(--ink-soft); max-width:56ch; }
+  footer{ border-top:1px solid var(--line); padding:22px clamp(18px,5vw,56px) 34px; }
+  footer .fin{ max-width:1180px; margin:0 auto; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; color:var(--grey); font-size:13px; }
+  footer p{ margin:0; }
+
+  /* ---------- project view ---------- */
+  .projbar{
+    position:sticky; top:61px; z-index:45;
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    padding:10px clamp(18px,5vw,56px);
+    background:color-mix(in srgb, var(--bg) 94%, transparent);
+    backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .projbar button, .projbar .pb-link{
+    background:none; border:0; color:var(--ink-soft); font-size:13px; font-weight:700;
+    letter-spacing:.14em; text-transform:uppercase; padding:8px 6px; text-decoration:none; white-space:nowrap;
+  }
+  .projbar button:hover, .projbar .pb-link:hover{ color:var(--rust); }
+  .projbar .pb-nav{ display:flex; align-items:center; gap:4px; }
+  .projbar button:disabled{ opacity:.4; cursor:default; }
+  .projbar button:disabled:hover{ color:var(--ink-soft); }
+  .projbar .pb-title{ text-align:center; font-size:15px; min-width:0; }
+  .projbar .pb-title .n{ color:var(--rust); font-weight:800; margin-right:8px; }
+  .projbar .pb-title .t{ font-style:italic; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+
+  .spread{ padding:clamp(26px,4vw,48px) 0 8px; min-height:52vh; }
+  /* opening spread */
+  .opening{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,4vw,56px); align-items:start; }
+  .opening .txt{ position:relative; padding-bottom:90px; }
+  .opening .pnum-small{ margin:0 0 6px; font-family:"IBM Plex Mono",monospace; font-size:12.5px; letter-spacing:.2em; color:var(--rust); text-transform:uppercase; }
+  .opening h2{ margin:0 0 6px; font-size:clamp(38px,5.4vw,64px); line-height:1.02; font-weight:800; font-style:italic; letter-spacing:-.015em; }
+  .opening .sub{ margin:0 0 16px; font-size:clamp(17px,2vw,20px); font-style:italic; color:var(--grey); }
+  .opening .meta{ margin:0 0 18px; font-size:13px; color:var(--grey); font-weight:600; letter-spacing:.04em; }
+  .opening .keys{ margin:0 0 14px; font-family:"IBM Plex Mono",monospace; font-size:12px; line-height:1.65; color:var(--rust-soft); }
+  .opening .blurb p{ margin:0 0 13px; color:var(--ink-soft); font-size:15.5px; max-width:58ch; }
+  .opening .bignum{
+    position:absolute; left:-8px; bottom:-30px; margin:0;
+    font-size:clamp(110px,15vw,190px); font-weight:800; line-height:.8; color:var(--rust);
+    opacity:.16; pointer-events:none; user-select:none;
+  }
+  /* Hero is fitted whole, never filled/cropped: natural aspect ratio,
+     scaled down to the column and the viewport height, centred on the
+     wash background, and never stretched past its natural size. */
+  .opening .heroimg{ min-height:0; min-width:0; display:flex; flex-direction:column; gap:10px; }
+  .opening .heroimg img{ width:auto; height:auto; max-width:100%; max-height:74vh; object-fit:contain; margin:0 auto; }
+  /* a piece flagged "opening" (the Shell's programmatic distribution
+     diagram, cut straight from the portfolio PDF) sits directly under
+     the main illustration in the same column, tight against it */
+  figure.opening-diagram{ margin:0 auto; width:min(100%,540px); }
+  figure.opening-diagram button{ padding:8px; }
+  figure.opening-diagram img{ max-height:56vh; }
+  /* full-width piece on the opening spread (the Shell's typology chart) */
+  .opening-full{ margin-top:clamp(18px,3vw,34px); }
+  .opening .heroimg button{ display:flex; align-items:center; justify-content:center; width:100%; padding:12px; box-sizing:border-box; border:0; background:var(--wash); }
+
+  /* piece spreads */
+  .spread .srow + .srow{ margin-top:clamp(16px,2.6vw,30px); }
+  .layout-pair{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(14px,2.4vw,28px); align-items:start; }
+  .layout-grid4{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(14px,2.4vw,28px); align-items:start; }
+  .layout-single{ display:flex; justify-content:center; }
+  .layout-single figure{ width:min(100%,880px); }
+  /* expanded single: one piece given the full width of the spread,
+     still shown whole at no more than its natural size */
+  .layout-wide{ display:flex; justify-content:center; }
+  .layout-wide figure{ width:100%; }
+  .layout-wide figure img{ max-height:84vh; }
+  .layout-trio{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(14px,2.4vw,28px); align-items:start; }
+  /* Every piece is shown whole: its natural aspect ratio, fitted inside
+     its cell and capped at a viewport height so tall boards and wide
+     panoramas stay fully visible, centred on the wash background.
+     width:auto (not 100%) means a small source image is displayed at
+     its natural size instead of being stretched — and blurred — to
+     fill the cell. */
+  figure.piece{ margin:0; min-width:0; display:flex; flex-direction:column; align-items:center; }
+  figure.piece button{ display:flex; align-items:center; justify-content:center; width:100%; padding:10px; box-sizing:border-box; border:0; background:var(--wash); }
+  figure.piece img{ width:auto; height:auto; max-width:100%; max-height:76vh; object-fit:contain; margin:0 auto; }
+  figure.piece figcaption{ width:100%; box-sizing:border-box; padding:8px 2px 0; font-size:12.5px; font-style:italic; color:var(--grey); text-align:left; }
+  figure.piece figcaption .pn{ font-style:normal; font-family:"IBM Plex Mono",monospace; font-size:11.5px; color:var(--faint); margin-right:7px; }
+  /* title printed under a project's opening image, where the
+     portfolio itself captions that image (Chelsea's Soda Can Model) */
+  .hero-cap{
+    margin:0; padding:2px 2px 0; font-size:13px; font-style:italic; color:var(--grey); text-align:left;
+  }
+  .hero-cap .pn{ font-style:normal; font-family:"IBM Plex Mono",monospace; font-size:11.5px; color:var(--faint); margin-right:7px; }
+  .hero-cap b{ color:var(--ink-soft); font-weight:700; font-style:normal; }
+
+  /* ---------- Mala spread 9, retyped as a legible diagram ----------
+     A faithful transcription of printed pp.31–32, set in large type:
+     the same heading, populations, 30-crop table and five Mala Count
+     Scenarios as the portfolio, with no number changed. */
+  .typed{
+    border:1.5px solid var(--line); background:var(--wash);
+    padding:clamp(18px,3.4vw,38px); margin:0 0 clamp(20px,3vw,34px);
+  }
+  .typed .t-eyebrow{
+    margin:0 0 8px; font-family:"IBM Plex Mono",monospace; font-size:11.5px;
+    letter-spacing:.18em; text-transform:uppercase; color:var(--garden);
+  }
+  .typed h3{
+    margin:0 0 10px; font-size:clamp(22px,3.4vw,32px); line-height:1.15;
+    font-weight:800; color:var(--ink); max-width:26ch;
+  }
+  .typed .t-intro{ margin:0 0 22px; color:var(--ink-soft); font-size:15px; max-width:62ch; }
+  .typed h4{
+    margin:24px 0 10px; font-size:16.5px; font-weight:800; font-style:italic; color:var(--garden);
+  }
+  .typed .t-stats{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .typed .t-stat{ border:1px solid var(--line); background:var(--bg); padding:12px 16px; }
+  .typed .t-stat span{
+    display:block; font-family:"IBM Plex Mono",monospace; font-size:11px; font-weight:500;
+    letter-spacing:.12em; text-transform:uppercase; color:var(--grey); margin-bottom:4px;
+  }
+  .typed .t-stat strong{ font-size:clamp(20px,2.6vw,27px); font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; }
+  .typed table{ width:100%; border-collapse:collapse; font-size:14.5px; font-variant-numeric:tabular-nums; }
+  .typed th{
+    font-family:"IBM Plex Mono",monospace; font-size:10.5px; font-weight:500; line-height:1.45;
+    letter-spacing:.06em; text-transform:uppercase; color:var(--garden);
+    text-align:right; padding:8px 10px; border-bottom:2px solid var(--ink); vertical-align:bottom;
+  }
+  .typed th:first-child{ text-align:left; }
+  .typed td{ padding:6.5px 10px; border-bottom:1px solid var(--line); text-align:right; color:var(--ink-soft); }
+  .typed td:first-child{ text-align:left; font-weight:700; color:var(--ink); white-space:nowrap; }
+  .typed tfoot td{
+    border-bottom:0; border-top:2px solid var(--ink); font-weight:800; color:var(--ink);
+    font-size:15.5px; padding-top:10px;
+  }
+  .typed .t-cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px; }
+  .typed .t-card{ border:1px solid var(--line); background:var(--bg); padding:14px 16px; }
+  .typed .t-card p{ margin:0 0 10px; font-size:12.5px; font-weight:700; line-height:1.5; text-transform:uppercase; letter-spacing:.03em; color:var(--ink-soft); }
+  .typed .t-card .calc{ display:block; font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:var(--grey); margin-bottom:2px; }
+  .typed .t-card .result{ display:block; font-size:clamp(20px,2.4vw,25px); font-weight:800; color:var(--garden); font-variant-numeric:tabular-nums; }
+  .typed .t-src{ margin:20px 0 0; font-size:13px; font-style:italic; color:var(--grey); max-width:64ch; }
+  @media (max-width:640px){
+    .typed .t-stats{ grid-template-columns:1fr; }
+    .typed table, .typed tbody, .typed tfoot, .typed tr, .typed td{ display:block; width:100%; box-sizing:border-box; }
+    .typed thead{ display:none; }
+    .typed tbody tr{ padding:10px 0; border-bottom:1px solid var(--line); }
+    .typed td{
+      display:flex; justify-content:space-between; align-items:baseline; gap:16px;
+      text-align:right; padding:3px 0; border-bottom:0;
+    }
+    .typed td::before{
+      content:attr(data-label); font-family:"IBM Plex Mono",monospace; font-size:10.5px;
+      letter-spacing:.07em; text-transform:uppercase; color:var(--grey); text-align:left; font-weight:500;
+    }
+    .typed td:first-child{ white-space:normal; }
+    .typed tfoot tr{ padding-top:10px; }
+    .typed tfoot td{ border-top:0; padding:3px 0; }
+    .typed tfoot td:first-child{ border-top:2px solid var(--ink); padding-top:10px; }
+  }
+
+  /* heading block for a headed paged spread (Detroit's historic
+     and abandoned-station spreads) — same voice as the opening */
+  .spread-head{ margin:0 0 clamp(20px,3vw,34px); max-width:760px; }
+  .spread-head .sh-kick{ margin:0 0 6px; font-family:"IBM Plex Mono",monospace; font-size:12.5px; letter-spacing:.2em; color:var(--rust); text-transform:uppercase; }
+  .spread-head h3{ margin:0 0 8px; font-size:clamp(30px,4.4vw,48px); line-height:1.04; font-weight:800; font-style:italic; letter-spacing:-.015em; }
+  .spread-head .sh-sub{ margin:0; font-size:15.5px; line-height:1.55; color:var(--ink-soft); max-width:58ch; }
+
+  .spread-note{
+    margin:26px auto 4px; max-width:52ch; text-align:center;
+    font-style:italic; color:var(--grey); font-size:14.5px;
+  }
+  .spread-note .mono{ font-style:normal; font-size:12px; color:var(--faint); display:block; margin-top:5px; }
+
+  /* ---------- Detroit Thesis Prep Book: booklet + GIF ----------
+     The prep book as printed spreads (from the author's PDF):
+     the same spreads flipping on their own in the looping GIF
+     first, on top, and one spread at a time in the flippable
+     booklet beneath it — fitted whole, arrow buttons, a spread
+     counter and touch swipe. Paired spreads carry a soft centre
+     gutter seam where the book binding falls. */
+  .booklet{ max-width:1080px; margin:clamp(22px,3.4vw,36px) auto 0; }
+  .bk-stage{
+    position:relative; display:flex; align-items:center; justify-content:center;
+    background:var(--wash); padding:12px; min-height:200px; box-sizing:border-box;
+  }
+  .bk-stage img{ width:auto; height:auto; max-width:100%; max-height:76vh; object-fit:contain; margin:0 auto; cursor:zoom-in; }
+  .bk-nav{
+    position:absolute; top:50%; transform:translateY(-50%);
+    width:48px; height:48px; border-radius:50%;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    border:1px solid var(--line); color:var(--ink);
+    font-size:22px; line-height:1; display:inline-flex; align-items:center; justify-content:center;
+  }
+  .bk-nav:hover{ border-color:var(--rust); color:var(--rust); }
+  .bk-nav:disabled{ opacity:.35; cursor:default; }
+  .bk-nav:disabled:hover{ border-color:var(--line); color:var(--ink); }
+  .bk-prev{ left:10px; } .bk-next{ right:10px; }
+  .bk-bar{
+    display:flex; align-items:baseline; justify-content:space-between; gap:14px;
+    padding:10px 2px 0; flex-wrap:wrap;
+  }
+  .bk-title{ margin:0; font-size:14.5px; font-weight:700; color:var(--ink-soft); }
+  .bk-count{ margin:0; font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:var(--faint); white-space:nowrap; }
+  .bk-gif{ max-width:1080px; margin:0 auto; }
+  .bk-gif .bk-gif-label{
+    margin:0 0 8px; font-family:"IBM Plex Mono",monospace; font-size:11.5px;
+    letter-spacing:.18em; text-transform:uppercase; color:var(--rust);
+  }
+  .bk-gif .bk-gif-frame{ background:var(--wash); padding:12px; display:flex; justify-content:center; box-sizing:border-box; }
+  .bk-gif img{ width:auto; height:auto; max-width:100%; max-height:70vh; object-fit:contain; margin:0 auto; }
+  @media (max-width:560px){
+    .bk-nav{ width:42px; height:42px; }
+    .bk-prev{ left:6px; } .bk-next{ right:6px; }
+  }
+
+  /* bottom paging bar */
+  .pagebar{
+    position:sticky; bottom:0; z-index:45; margin-top:26px;
+    border-top:1px solid var(--line);
+    background:color-mix(in srgb, var(--bg) 94%, transparent);
+    backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
+    padding:10px clamp(18px,5vw,56px) calc(10px + env(safe-area-inset-bottom));
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  }
+  .pagebar .nums{ display:flex; gap:2px; flex-wrap:wrap; }
+  .pagebar .nums button{
+    background:none; border:0; padding:7px 9px; font-size:15px; font-weight:700; color:var(--grey);
+    border-bottom:2px solid transparent;
+  }
+  .pagebar .nums button:hover{ color:var(--rust); }
+  .pagebar .nums button[aria-current="true"]{ color:var(--rust); border-bottom-color:var(--rust); }
+  .pagebar .nums button:disabled{ color:var(--faint); cursor:default; opacity:.55; }
+  .pagebar .spreadlabel{ font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--faint); }
+  .pagebar .nextpage{
+    background:none; border:1px solid var(--line); color:var(--ink);
+    border-radius:999px; padding:10px 20px; font-size:14px; font-weight:700;
+  }
+  .pagebar .nextpage:hover{ border-color:var(--rust); color:var(--rust); }
+  .pagebar .prevpage{
+    margin-left:auto; background:none; border:1px solid var(--line); color:var(--ink);
+    border-radius:999px; padding:10px 20px; font-size:14px; font-weight:700;
+  }
+  .pagebar .prevpage:hover{ border-color:var(--rust); color:var(--rust); }
+  .pagebar .prevpage:disabled{ opacity:.4; cursor:default; }
+
+  .fadein{ animation:fade .35s ease both; }
+  @keyframes fade{ from{ opacity:0; } to{ opacity:1; } }
+  @media (prefers-reduced-motion: reduce){ .fadein{ animation:none; } }
+
+  /* ---------- lightbox ---------- */
+  .lb{ position:fixed; inset:0; z-index:100; background:var(--lb-bg); color:var(--lb-ink); display:flex; flex-direction:column; }
+  .lb[hidden]{ display:none; }
+  .lb-top{ display:flex; align-items:center; gap:12px; padding:12px 16px; }
+  .lb-top .lb-proj{ font-family:"IBM Plex Mono",monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase; opacity:.75; margin:0; }
+  .lb-top .lb-count{ font-family:"IBM Plex Mono",monospace; font-size:12.5px; opacity:.75; margin-left:auto; }
+  .lb-btn{
+    background:rgba(255,255,255,.09); color:var(--lb-ink); border:1px solid rgba(255,255,255,.22);
+    border-radius:999px; min-width:44px; height:44px; padding:0 14px;
+    font-size:19px; line-height:1; display:inline-flex; align-items:center; justify-content:center;
+  }
+  .lb-btn:hover{ background:rgba(255,255,255,.18); }
+  .lb-stage{ flex:1; display:flex; align-items:center; justify-content:center; min-height:0; min-width:0; padding:4px 12px; position:relative; overflow:hidden; }
+  /* Default lightbox view is always the fully-fitted image: the whole
+     picture inside the viewport, never cropped and never upscaled
+     past its natural size. Zoom is only the explicit toggle below. */
+  .lb-stage img{ width:auto; height:auto; max-width:100%; max-height:100%; object-fit:contain; margin:0 auto; border-radius:4px; }
+  .lb.is-zoomed .lb-stage{ overflow:auto; display:block; text-align:center; }
+  .lb.is-zoomed .lb-stage img{ max-width:none; max-height:none; margin:12px auto; }
+  .lb-zoom{ font-size:13.5px; font-weight:700; width:auto; letter-spacing:.04em; }
+  .lb-nav{ position:absolute; top:50%; transform:translateY(-50%); width:48px; height:48px; font-size:22px; border-radius:50%; }
+  .lb-prev{ left:14px; } .lb-next{ right:14px; }
+  .lb-cap{ padding:12px 18px 20px; text-align:center; }
+  .lb-cap .lb-title{ margin:0 0 3px; font-size:16.5px; font-weight:700; }
+  .lb-cap .lb-meta{ margin:0; font-size:12.5px; opacity:.75; font-family:"IBM Plex Mono",monospace; }
+
+  [hidden]{ display:none !important; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:1020px){
+    .pgrid{ grid-template-columns:repeat(2,1fr); }
+    .layout-trio{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:760px){
+    .about{ grid-template-columns:1fr; }
+    .opening{ grid-template-columns:1fr; }
+    .opening .txt{ padding-bottom:64px; }
+    .opening .heroimg{ min-height:0; order:2; }
+    .opening .heroimg img{ max-width:100%; max-height:62vh; }
+    .projbar{ top:60px; }
+    .projbar .pb-title .t{ display:none; }
+  }
+  @media (max-width:560px){
+    .pgrid{ grid-template-columns:1fr; }
+    .layout-pair, .layout-grid4, .layout-trio{ grid-template-columns:1fr; }
+    .cat h2{ font-size:clamp(40px,13.5vw,58px); }
+    .topbar .name{ letter-spacing:.22em; font-size:11.5px; }
+    figure.piece img{ max-height:72vh; }
+    .pcard .imgbox{ aspect-ratio:1/1; }
+    .pagebar{ gap:8px; }
+    .pagebar .nextpage{ margin-left:0; flex:1; }
+    .pagebar .spreadlabel{ width:100%; order:-1; }
+    .lb-nav{ width:42px; height:42px; }
+    .lb-prev{ left:8px; } .lb-next{ right:8px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="name" href="#" id="homeLink">Ellie Derwenskus</a>
+  <div class="icons">
+    <a href="https://www.linkedin.com/in/ellie-derwenskus/" target="_blank" rel="noopener" aria-label="Ellie Derwenskus on LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45z"/></svg>
+    </a>
+    <a href="mailto:elliederwenskus@gmail.com" id="mailToggle" aria-label="Show Ellie Derwenskus's email address" aria-expanded="false" aria-controls="mailPop">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    </a>
+    <div class="mailpop" id="mailPop" hidden>
+      <a class="mailaddr mono" href="mailto:elliederwenskus@gmail.com">elliederwenskus@gmail.com</a>
+      <button type="button" class="mailcopy" id="mailCopy">Copy</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= INDEX VIEW ================= -->
+<main id="viewIndex">
+  <div class="wrap-wide">
+
+    <div class="secswitch" role="group" aria-label="Choose a portfolio section">
+      <button type="button" class="sectab" id="tabSchool" aria-pressed="true">
+        <span class="st-k">Section 01</span>
+        <span class="st-t">School Portfolio</span>
+        <span class="st-s">Syracuse University · 2018–2023 · the portfolio PDF</span>
+      </button>
+      <button type="button" class="sectab" id="tabWork" aria-pressed="false">
+        <span class="st-k">Section 02</span>
+        <span class="st-t">Work Samples</span>
+        <span class="st-s">HKS · James Maynard Architect · June 2026 work samples PDF</span>
+      </button>
+    </div>
+
+    <div id="secSchool">
+    <section class="cat" aria-labelledby="cat1-h">
+      <p class="eyebrow">Section 01 · School Portfolio — Architecture &amp; Research</p>
+      <h2 id="cat1-h">architecture.</h2>
+      <p class="intro">Thesis, studio and precedent work from Syracuse University's School of Architecture — each project opens like a book, page by page.</p>
+      <p class="countline" id="countLine"></p>
+      <div class="pgrid" id="gridArch"></div>
+    </section>
+
+    <hr class="rule" />
+
+    <section class="cat" aria-labelledby="cat2-h">
+      <p class="eyebrow">Section 01 · School Portfolio — Making &amp; Miscellany</p>
+      <h2 id="cat2-h">making &amp; etc.</h2>
+      <p class="intro">Micro architecture at jewelry scale, and a gathering of additional studies.</p>
+      <div class="pgrid" id="gridEtc" style="padding-top:26px;"></div>
+    </section>
+
+    <hr class="rule" />
+
+    <section class="about" aria-labelledby="about-h">
+      <div>
+        <h3 id="about-h">About</h3>
+        <p>Ellie Derwenskus is an architectural designer and project manager based in New York, NY. B.Arch, Syracuse University School of Architecture (2018–2023). This site presents her selected-works portfolio from those years — thesis, studio, internship and elective work.</p>
+        <p>Her framing of the work: a building is a product — shaped by client input, test fits, prototypes and trial-and-error iteration, from first sketch to fabrication.</p>
+      </div>
+      <div>
+        <p>Connect: <a href="https://www.linkedin.com/in/ellie-derwenskus/" target="_blank" rel="noopener">linkedin.com/in/ellie-derwenskus</a></p>
+        <p>Email: <a href="mailto:elliederwenskus@gmail.com">elliederwenskus@gmail.com</a></p>
+      </div>
+    </section>
+    </div><!-- /secSchool -->
+
+    <div id="secWork" hidden>
+    <section class="cat" aria-labelledby="catw-h">
+      <p class="eyebrow">Section 02 · Work Samples — Professional Practice</p>
+      <h2 id="catw-h">work samples.</h2>
+      <p class="intro">Professional project work at HKS and James Maynard Architect (JMA) in New York — a separate document from the school portfolio, with its own index below.</p>
+      <p class="countline" id="countLineWork"></p>
+      <div class="pgrid" id="gridWork"></div>
+    </section>
+
+    <hr class="rule" />
+
+    <section class="about" aria-labelledby="worknote-h">
+      <div>
+        <h3 id="worknote-h">About these samples</h3>
+        <p>Each project opens with Ellie's own project text from the work samples PDF, with her role, phases, year, size and project type listed as printed there — Revit drafting and medical-planning support at HKS, and project management, CD sets and 3D modeling at James Maynard Architect.</p>
+        <p>Every image is one complete piece as it appears in the PDF — a rendering, plan, detail or diagram kept whole, never split into fragments and never merged with a neighbour.</p>
+      </div>
+      <div>
+        <h3>Credits, in Ellie's own words</h3>
+        <p>Wynn Resort — “Disclaimer: The renderings are not my work and are included as reference only.” Tisch Cancer Hospital — “Disclaimer: The renderings are to be accredited to KPF.”</p>
+        <p>Both disclaimers are printed in the PDF itself, and each is repeated on the project's opening page, on every spread, and in the caption of every rendering it covers.</p>
+      </div>
+    </section>
+    </div><!-- /secWork -->
+
+  </div>
+  <footer>
+    <div class="fin">
+      <p>© Ellie Derwenskus — School Portfolio 2018–2023 · Work Samples 2023–2026.</p>
+      <p class="mono">Built from two PDFs · school portfolio (28 pages) + work samples (June 2026, 6 pages)</p>
+    </div>
+  </footer>
+</main>
+
+<!-- ================= PROJECT VIEW ================= -->
+<main id="viewProject" hidden>
+  <div class="projbar">
+    <button type="button" id="pbHome">‹ Index</button>
+    <div class="pb-title"><span class="n" id="pbNum"></span><span class="t" id="pbTitle"></span></div>
+    <div class="pb-nav">
+      <button type="button" id="pbBack">‹ Back</button>
+      <button type="button" id="pbNext">Next ›</button>
+    </div>
+  </div>
+  <div class="wrap-wide">
+    <div class="spread fadein" id="spreadBox"></div>
+  </div>
+  <div class="pagebar">
+    <div class="nums" id="pbNums" role="group" aria-label="Jump to project"></div>
+    <span class="spreadlabel" id="pbSpreadLabel"></span>
+    <button type="button" class="prevpage" id="pbPrevPage">‹ Back</button>
+    <button type="button" class="nextpage" id="pbNextPage">Next page ›</button>
+  </div>
+</main>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lb" id="lightbox" hidden role="dialog" aria-modal="true" aria-labelledby="lbTitle">
+  <div class="lb-top">
+    <p class="lb-proj" id="lbProj"></p>
+    <span class="lb-count" id="lbCount"></span>
+    <button class="lb-btn lb-zoom" id="lbZoom" aria-pressed="false" aria-label="Toggle between fitted view and actual size">Zoom</button>
+    <button class="lb-btn" id="lbClose" aria-label="Close viewer">✕</button>
+  </div>
+  <div class="lb-stage" id="lbStage">
+    <img id="lbImg" alt="" />
+    <button class="lb-btn lb-nav lb-prev" id="lbPrev" aria-label="Previous piece">‹</button>
+    <button class="lb-btn lb-nav lb-next" id="lbNext" aria-label="Next piece">›</button>
+  </div>
+  <div class="lb-cap">
+    <p class="lb-title" id="lbTitle"></p>
+    <p class="lb-meta" id="lbMeta"></p>
+  </div>
+</div>
+
+<script>
+var PROJECTS = [
+  { id:"detroit", num:"01", title:"Resuscitate Detroit", sub:"A City Decaying in Its Ruins",
+    meta:"Thesis · 2023 · Central Michigan Station, Detroit, MI", hero:"assets/img01.jpg",
+    keys:"Keywords: Positive Entropy, Symbolic Fragments, Probing the Soul and Character of a Place, Site as a Theatrical Setting, Machine Capable of Expression, Optimistic Creations, Getaway Destination Architecture, Visitors Confronted with Old and New, Past and Present",
+    blurb:["Detroit is an example of a city that suffers architectural neglect to this day. “Detroit may be littered with ruins and abandoned lots, but it is not empty” as said in Reclaiming the Ruin: Detroit's Second Coming. The city was once a leading Industrialized motor city heavily relied on by the rest of the US to portray the success of the nation and its power prestige over other global countries with solely its automotive and later wartime effort vehicles and aircrafts. However the 50s, 60s, and the postwar era were periods where Detroit's automobile image shifted and gained a new sight as being a city symbolizing the nation's failure with the rise of globalization. Architecture and the built world here are seen as the problem to current economic and societal failures. Eradicating abandoned homes and lots are prioritized over seeing a building's potential, which evidently results in a loss of place and a rapidly downfalling lost city. How can a city that was praised and flocked with attraction, now become a fragmented ruin?",
+    "The goal of this thesis is to rethink how to reintegrate attraction back into the city while working within one of Detroit's other industrialized motor success: Central Michigan Station (CMS), a 1910 train depot. The station itself takes up three levels, with the remaining eighteen as office levels. Currently CMS is abandoned and becomes another fragment within the lost city. Within both the station and office levels, this thesis contends to intervene within the abandoned station while keeping the totality of CMS' character the same. The project is a restoration and intervention / rejuvenation project and programmatically is distributed as a hotel and museum. The basic idea is to live within and alongside Detroit's history. Formally, the intervention takes inspiration from automobiles silhouettes. “Detroit will never be built as it was…[rather] it will be the first of many cities forced to become something else” (Reclaiming the Ruins: Detroits Second Coming)."] },
+  { id:"shell", num:"02", title:"The Shell", sub:"A Hurricane Research Center That Opens & Closes",
+    meta:"Studio · 2022 · Florida — with Oliver–Junming Liao", hero:"assets/img02.jpg",
+    blurb:["With an aim to address Florida's tropical yet hurricane prone environmental location, our proposal pushes to both embrace nature during its pleasant, sunny and good thermal comfort conditions and its not so pleasant, hurricane seasons by incorporating the idea of operability and flexibility within our design. With our study of hurricane shutter typologies / vernacular in Florida, we began to understand the different levels of how one, shelters. The shutter is either directly attached to the window and is inoperable or operable by the user. There's instances where one can see out their hurricane protection shutter screen and vice versa. But there's other instances where visibility to the inside and outside are dim. Our proposal is to not only scale up the shutter typology from a small housing scale to a large research center scale but to also create a high visibility threshold along the “Shell” which is what we consider, our reimagined hurricane shutter.",
+    "The preconception of the term “protection” often comes with the idea of density, scale, and mass. We, in turn, wanted to create a light frame timber structure that can also provide the same strength of current dense protective systems. In short we wanted a daintiness, a delicacy that provides great durability and rigidity against Florida's unpredictable hurricanes and weather fluctuations.",
+    "By establishing a newly designed concrete and wood joint system with tracts, we were able to allow the users to operate the building in small movements (inner wall movements for variable space) and larger movements (the facade) like how one can operate common hurricane shutters. This creates passive air flow throughout the building Shell and internal spaces when the weather is optimal.",
+    "Programmatically, we divided the Research Center into five components: Labs and Offices on the sides, a Greenhouse in the center so the mobile roof can allow natural rainfall and sunlight to enter, a Balcony circulation along the perimeter, and a Public parkland and multifunctional space at ground level that bridges the “frontyard” area to the “backyard” waterfront area through the building.",
+    "The “front yard” and “backyard” public spaces are covered with a more temporal screen made of fabric that can roll out and in to allow for shade and “shelter” in a different way outside of the core Shell structure. This is what we call our pavilion."] },
+  { id:"mala", num:"03", title:"“Mala” — Gardening Toward Self-Sufficiency", sub:"A Response to COVID-19 on the Hawaiian Islands",
+    meta:"Studio · 2020 · Honolulu, Hawai'i", hero:"assets/img03.jpg",
+    blurb:["This project's initial research began with trips to farmer's markets, swapmeets, difficult attempts to interview vendors and farmers via call during covid, while also being able to interview a few generous vendors at the markets.",
+    "The goal of the project was to create a hybrid market space that bridges Hawaii's traditional farmers market tent typology to community gardening spaces in order to achieve self sufficiency and reliancy on solely hawaiian land for sustenance. Hawaii has solely been relying mostly on outer state industries and tourists as their form of economic success and stability. Specifically, imported goods and the tourism industry as their economy, but as the Covid-19 Pandemic hit the islands, imports decreased, tourism has halted, and in response, the economy has plummeted, food scarcity became a fear because of the slowing of imports, people working in Hawaii's hotel, restaurant, and tourist industry have lost their jobs, and so forth.",
+    "This farmers market landscape proposes to provide a response; to implement a new economy, a localized economy that is self sufficient and resilient. There will be a shift and a greater emphasis on what Hawaii is also good at: agriculture. If we push to expand our agriculture, there will be food security, increase in jobs, and even further emphasize the “support local” initiative. This will also normalize the idea that gardening and farmers markets are active and are an essential part of a daily lifestyle on the islands, and in conjunction, this will also bring back socialization and the idea of togetherness we once had before Covid (with masks and safety precautions such as the designed 6ft distancing that was designed within the marketspace we called the Mala.",
+    "Going to Farmer's Markets, interviewing local vendors, visiting sunday Hawaii swap-meets, calling for virtual or in-person interview requests were all challenging yet humbling experiences i've had. I had an amazing time hearing the inputs of my community for a school project that i have never been able to do before for my Syracuse Architecture education and I am very grateful for the business owners and knowledgeable farmers for sharing their wealth of expertise and time."] },
+  { id:"izumo", num:"04", title:"Izumo Taisha", sub:"Rice Structure (1744) & Government Building — Precedent Analysis",
+    meta:"Precedent study · 2022 · Izumo, Japan", hero:"assets/img04.jpg",
+    blurb:["Izumo Taisha is one of the oldest and most well-known shrines in Japan. It is designed with Taisha-Zukuri, the oldest form of Japanese shrine architecture. The Government building was made in replacement of the burned down past wooden government building. The new concrete structure was inspired by the rice paddy structures along the east and west sides of the site. The use of concrete was meant to prevent fire and allow for earthquake resistance. Prestressed, precast, and high performance concrete shell methods were used in the construction. The primary I-type like beams are PS post tensioned and span 47m connecting the two large columns. The large columns display a PC concrete design of rice racks that symbolizes the god of farming. The longer side wall has glass to illuminate the interior to symbolize illuminating the god at night. All of the design moves were made to represent the Izumo Shrine and the city's culture, in both, the geography and the materials being used. To use concrete in an all-wooden Edo period site was a bold move. However there was an attempt to imitate the wooden structures striation and rhythm (specifically the East, West rice paddy structures) and the literal texture of wood using concrete and iconography.",
+    "The interesting difference and similarities between the vastly materialistically variable structures are that the Edo rice paddy structure was of course made all by hand, and the concrete one was made of high technological machinery and by hand. Due to the site not having roads, much of the concrete construction was done by hand with the use of also small non-damaging machinery for the site. An underlying similarity in both cases is that each structure appears to have an element of incremental additions that create a collective whole; it is the order in which things are assembled that differs. In the case of the Edo building, the platform lays first, the middle portion of steps, the back wall, roof frames, and columns are assembled from one side of the structure to the other, finally ending with the capping of the roof. In the case of the concrete building, the large side columns lay first, then the two I-beams lay on top, and what follows is the grill and smaller structural elements on top that are assembled from one side of the structure to the other.",
+    "Izumo Taisha drawing was selected for the First Precedent Analysis nomination within the class of 2023, Syracuse School of Architecture."] },
+  { id:"dreamhouse", num:"05", title:"Navigating Turbulent Waters", sub:"Atrium Mural — Dreamhouse School, Kapolei",
+    meta:"Internship · 2022 · Design Partners Incorporated, Hawai'i", hero:"assets/img05.jpg",
+    blurb:["A polynesian astronomical concept describes the world being divided into three hemispherical zones denoted the, “triple heaven.” The division ironically however is harmonious and not separate. The half circle in orange is the symbol of this polynesian view. The outermost radial is considered the celestial zone, with the innermost radial being the terrestrial zone, and the middle being the air of space (zone) that unifies the two seemingly separate environments into one zone, one world. The cosmos and the nature below it are dependent on one another. The two together are a significant part of the identity of the Hawaiian islands. It is from the sky that our historical ancestors and predecessors were able to navigate the pacific ocean to find their way back to the Hawaiian islands and return home. It is from our land that we are able to grow strong, healthy and become leaders of our home.",
+    "The waves are a representation of how through turbulent waters, we can still find our way with the help of the celestial zone above. The sugarcane is a representation of not only Kapolei's rich agricultural history but also a representation of growth and standing tall to reach for the stars. As the Dreamhouse School students engage in a flexible collaborative environment of personal growth, they too will be able to navigate through unexpected waters in becoming strong leaders of our current and future generations."] },
+  { id:"chelsea", num:"06", title:"Museum? Or Ship?", sub:"Chelsea Pier Historical Museum",
+    meta:"Studio · New York, NY — beside the High Line", hero:"assets/img06.jpg",
+    heroCaption:"Soda Can Model — Chelsea Pier Historical Museum",
+    blurb:["Located on a corner site besides the New York High Line, this project program goal was to create an exhibition space. With the Chelsea Pier being in relatively close proximity to the site, I chose to design my exhibition as a historical museum of Chelsea Piers history. The typology of the original pier, like most piers in the past, were made of wood. Large cargo ships or cruise ships that docked at the piers were cladded with steel and other metals. I was inspired by the materiality of both the pier and the ships and incorporated steel and wood as the main form of consideration in the design.",
+    "At the center of the building is a long striated pond that digs down into the floor below, with tall steel totems that emerge out of the water. In addition, similar steel totems appear floating throughout the building. All the totems are used to display historical images and artwork of Chelsea Pier. There are three floors within this museum, two above, and one basement level below. The basement level is intended as a library where one can read about the pier while reflecting on the history besides the pond water. The pond tank extends down into the library and provides an underwater atmosphere-like environment. The circulation of the space is one that is continuously revolving around this center pond and continuously walking along the wooden platforms, in order to reminisce and have a feeling of walking on the actual historical piers alongside the Hudson River.",
+    "Models made of soda cans, wooden sticks, acrylic, chipboard, pins, and some plastic garbage."] },
+  { id:"playground", num:"07", title:"Playground Afloat", sub:"An Elevated Playground for the Everson Museum Plaza",
+    meta:"Studio · 2019 · Syracuse, NY", hero:"assets/img07.jpg",
+    blurb:["Bringing a twist to play with an industrial framework for the children of Syracuse New York.",
+    "The exterior of the Everson Museum by IM Pei is a concrete plaza with a water fountain to its immediate side. This project proposes to activate that plaza space even more so to allow additional visitors, families, and children even outside the museum. The playground is elevated off the ground, creating both a playful atmosphere above and below. The project emphasizes on the juxtapostion between light versus the heavy density of a concrete museum. On the Playground, above, children are able to take a few steps down into the sandbox (yellow) and the ball and toy area (red), as well as descend down into the glass box area across from the ball and toy area for splashing and playing within the fountain water. The platform above also has a small area of coverage which is where the snack station is for the children. Below the elevated playground is likewise intended to act as a playground, in which children can interact with the physical structure of the building and perhaps use it as a jungle gym. The intention was to create a family friendly and playful environment using grids, frames, and boxed masses (the colored programs) that sit and float within the frames as a form of design guidance."] },
+  { id:"jewelry", num:"08", title:"Metal Jewelry Smithing", sub:"Micro Architecture, Industrial, Cosmos",
+    meta:"Elective · 2022 · Syracuse University", hero:"assets/img08.jpg",
+    keys:"Keywords: micro architecture, industrial, cosmos",
+    blurb:["Aside from architecture, fun extracurricular courses I took in my senior year of college were couple introductory level in jewelry and metal-smithing courses. From here, I discovered a new side passion that uses the same tools and processes as the field of architecture: 3D CAD modeling, renderings, and fabrication at a micro scale. Architecture projects tend to take years to construct a building, but this new creative jewelry output allows me to practice and remain creative in a more condensed format and a more rapid timeline."] },
+  { id:"etc", num:"09", title:"Etc. Works", sub:"Selected Additional Studies",
+    meta:"Various · 2018–2023", hero:"assets/img09.jpg",
+    /* blurb removed at the author's request: nothing below the
+       “Various · 2018–2023” line — title, sub and meta only */
+    blurb:[] }
+];
+
+/* ================= SECTION 02 — WORK SAMPLES =================
+   From the separate June 2026 work samples PDF (6 pages). Kept fully
+   apart from the school portfolio above: its own projects, index and
+   numbering. Blurbs and metadata are Ellie's own, from that PDF.      */
+var WORK_PROJECTS = [
+  { id:"wynn", sec:"work", num:"01", title:"Wynn Resort", sub:"Al Marjan Island — Casino Resort, Back of House",
+    meta:"HKS · Al Marjan Island, Middle East", hero:"assets/img10.jpg",
+    cardNote:"Disclaimer: The renderings are not my work and are included as reference only",
+    disclaimer:"Disclaimer: The renderings are not my work and are included as reference only",
+    details:[["Firm","HKS"],["Role","Revit Drafter — Back of House"],["Phases","DD · CD"],["Year completed","Spring 2027"],["Size","3,767,370 SF"],["Project type","Hospitality"]],
+    blurb:["In addition to support in Tisch, I worked on the Wynn Resort Al Marjan project, a casino resort project in the Middle East. Partnering with national HKS teams such as individuals from the Florida and LA office, the pace of the project was an exceptionally fast one with documentation developed in real time to align with active construction. HKS was in charge of the Back of House elements."] },
+  { id:"tisch", sec:"work", num:"02", title:"Tisch Cancer Hospital", sub:"Mount Sinai — Adaptive Reuse Cancer Hospital",
+    meta:"HKS · New York, NY", hero:"assets/img11.png",
+    cardNote:"Disclaimer: The renderings are to be accredited to KPF",
+    disclaimer:"Disclaimer: The renderings are to be accredited to KPF",
+    details:[["Firm","HKS — in collaboration with KPF"],["Role","Revit Drafter — Interior Plan Details / Acoustics · RCPs, Floor Plans, Elevations · Medical Planning Regulations"],["Phases","DD · CD"],["Year completed","In Construction"],["Size","110,000 SF · 8 floors · 72 patient rooms"],["Project type","Healthcare"]],
+    blurb:["In collaboration with KPF, this is a Mount Sinai hospital adaptive reuse renovation project on the Upper East Side. In addition to state-of-the-art cancer treatment care and being named a, “Comprehensive Cancer Center” by the National Cancer Institute, the hospital also incorporates wellness amenities for both inpatient and outpatients. A sky garden is one of the elements that promotes wellness. HKS' scope was to provide the medical planning components such as the floor plan layouts of patient beds, nursing stations, etc throughout 8 Floors (72 patient rooms). We were in charge of all things that revolve around the technical medical areas, and KPF's role was to design the lobby, facade, and the sky garden. My primary responsibilities at HKS was this project and Wynn."] },
+  { id:"crown", sec:"work", num:"03", title:"Crown Residence", sub:"Salon & Closet Expansion — Upper East Side",
+    meta:"James Maynard Architect · New York, NY", hero:"assets/img12.jpg",
+    details:[["Firm","James Maynard Architect (JMA)"],["Role","Created CD Set · 3D Modeled entire project"],["Phases","SD"],["Year completed","N/A"],["Size","TBD SF"],["Project type","Single-Family Residential — Salon and Closet Expansion"]],
+    blurb:["The Crown Residence is an Upper East Side bidding proposal in which the client wanted to buy the adjacent unit to create a walk-in closet and hair salon spa space. Unlike Sontag (Traditional / Classicism), the renders and design take inspiration from modern interventions and store design to highlight the client's wardrobe."] },
+  { id:"sontag", sec:"work", num:"04", title:"Sontag Residence", sub:"Full Gut Renovation — Park Avenue",
+    meta:"James Maynard Architect · New York, NY", hero:"assets/img13.jpg",
+    details:[["Firm","James Maynard Architect (JMA)"],["Role","Project Manager — Created CD Set · Coordinating with Contractor, Subcontractors, and Interior Designer · 3D Modeled entire project · Reviewing Budgets · Window Landmarks Reviews · Building Architect Responses · Construction Administration · Interior Schedules"],["Phases","DD · CD · CA"],["Year completed","Late 2026"],["Size","~4,205 SF"],["Project type","Single-Family Residential"]],
+    blurb:["The Sontag Residence is a two-story project on Park Avenue's Upper East Side, slated for completion in late 2026. I joined in March 2025 during DD and quickly became the primary managing architect. This project reflects the full scope of my experience at JMA LLC. Interior furniture selections and finishes were led by the external interior designer; JMA LLC's scope includes the full gut renovation, as well as bathroom and millwork design."] },
+  { id:"acoustic", sec:"work", num:"05", title:"Acoustic Research", sub:"Auditorium Studies — Typology Graphics",
+    meta:"HKS · Nationwide", hero:"assets/img14.jpg",
+    details:[["Firm","HKS"],["Role","Researcher"],["Phases","N/A"],["Year completed","N/A"],["Size","N/A"],["Project type","Culture"]],
+    blurb:["Researched and compiled complex auditorium data from project archives across global HKS offices, sourcing 3D models and coordinating with teams responsible for projects dating back several years. When documentation was limited or unavailable, reconstructed auditorium designs through 3D modeling based on archival photographs and sketches. Synthesized findings into clear, visually compelling typology graphics to support the development of HKS's emerging Cultural sector."] },
+  { id:"etcwork", sec:"work", num:"06", title:"Etc. Contributions", sub:"Amancaya · Al Rabita · Lajcaj & More",
+    meta:"HKS · James Maynard Architect", hero:"assets/img15.jpg",
+    blurb:["Additional contributions across HKS and James Maynard Architect projects:",
+    "Amancaya — Exuma, The Bahamas · HKS · Role: Revit Drafter – Back of House · Phases: DD, CD · Year completed: TBD · Size: 296,597 SF · Project type: Hospitality.",
+    "Al Rabita — Mina Valley, Saudi Arabia · HKS · Role: Revit Drafter · Phases: SD · Project type: Master Plan Proposal.",
+    "Lajcaj — New York, NY, Upper East Side · JMA · Role: 3D Modeler & Renderer · Phases: SD · Year completed: TBD · Project type: Residential – Millwork Addition.",
+    "Further JMA residential projects in New York: Valenze · Morel · Joannou · Beebe Nussbaum · Doyle · Davey."] }
+];
+PROJECTS.forEach(function(pr){ pr.sec = "school"; });
+var ALL_PROJECTS = PROJECTS.concat(WORK_PROJECTS);
+
+var ITEMS = [
+  /* Detroit */
+  {s:"detroit-01.jpg",p:"detroit",t:"Render",title:"Central Michigan Station — intervention rendering",alt:"Rendering of the Central Michigan Station intervention with key structural elements, seen against a black background"},
+  {s:"detroit-02.jpg",p:"detroit",t:"Model",title:"Digital model — automotive-inspired structural frame",alt:"Wireframe digital model of the station intervention, its frame traced in magenta and gold"},
+  {s:"detroit-03.jpg",p:"detroit",t:"Drawing",title:"Site study — axial blocks, surviving buildings & the intervention",alt:"Tall site drawing layering axial subdividing blocks, surviving buildings and the proposed intervention at Central Michigan Station"},
+  {s:"detroit-04.jpg",p:"detroit",t:"Diagram",title:"Layered Sanborn maps — 1897, 1921, 2017",alt:"Diagram layering historic Sanborn maps of the station district from 1897, 1921 and 2017 over a bird's-eye view"},
+  /* Shell */
+  {s:"shell-01.jpg",p:"shell",t:"Render",title:"Bird's-eye view — the Shell and its waterfront context",alt:"Plan-view rendering of the Shell research center between the road, marina and waterfront"},
+  {s:"shell-04.jpg",p:"shell",t:"Drawing",title:"Isometric section cuts — life inside and out",alt:"Four isometric section cuts showing life inside and outside the Shell research center"},
+  {s:"shell-05.jpg",p:"shell",t:"Drawing",title:"Sectional perspective A",alt:"Long sectional perspective drawing through the labs, offices and greenhouse of the research center"},
+  {s:"shell-06.jpg",p:"shell",t:"Drawing",title:"Sectional perspective B",alt:"Sectional perspective drawing of the timber Shell building with its curved shutter facade"},
+  {s:"shell-07.jpg",p:"shell",t:"Diagram",o:2,title:"Hurricane shutter typologies in Florida — a vernacular of protection",alt:"Chart cataloguing Florida hurricane shutter typologies, materials and levels of visibility"},
+  {s:"shell-08.jpg",p:"shell",t:"Photo",title:"Physical model — timber shell, held",alt:"Photograph of hands holding the basswood physical model of the Shell's timber lattice"},
+  {s:"shell-09.jpg",p:"shell",t:"Photo",title:"Physical model — frame and lattice roof",alt:"Photograph of the basswood model showing the Shell's frame and lattice roof against black"},
+  {s:"shell-10.jpg",p:"shell",t:"Photo",title:"Physical model — roof lattice detail",alt:"Photograph looking across the physical model's woven timber roof lattice"},
+  {s:"shell-11.jpg",p:"shell",t:"Drawing",title:"Section detail — shutter arm & superstructure elevation",alt:"Section detail drawing of the shutter arm in relation to the elevation of the superstructure"},
+  {s:"shell-12.jpg",p:"shell",t:"Drawing",title:"Section detail — roof",alt:"Section detail drawings of the Shell's roof build-up and track system"},
+  /* Izumo */
+  {s:"izumo-01.jpg",p:"izumo",t:"Artwork",title:"Additive layering — Taisha-zukuri drawing",alt:"Illustrated analysis drawing of the Izumo Taisha rice structure's additive Taisha-zukuri layering, with figures working on the timber frame"},
+  {s:"izumo-02.jpg",p:"izumo",t:"Photo",title:"Government Building — additive layering of imitative concrete",alt:"Photograph of the concrete Izumo Taisha government building with its striated shell facade, captioned in the portfolio: Government Building, additive layering of imitative concrete"},
+  {s:"izumo-03.jpg",p:"izumo",t:"Photo",title:"Rice Paddy Structure — additive layering of Taisha-Zukuri",alt:"Photograph of the long wooden Edo-period rice paddy structure at Izumo Taisha, captioned in the portfolio: Rice Paddy Structure, additive layering of Taisha-Zukuri"},
+  /* Dreamhouse */
+  {s:"dreamhouse-01.jpg",p:"dreamhouse",t:"Photo",title:"The completed atrium mural — Dreamhouse School",alt:"Photograph of the finished atrium at Dreamhouse School, the wave mural wrapping the circulation core beside the stairs"},
+  {s:"dreamhouse-02.jpg",p:"dreamhouse",t:"Artwork",title:"Mural artwork — waves & the “triple heaven” motif",alt:"Detail of the mural artwork: swirling teal waves, orange concentric arcs and sugarcane stalks"},
+  {s:"dreamhouse-03.jpg",p:"dreamhouse",t:"Drawing",title:"“Wrap-around” elevation of the circulation core",alt:"Elevation and section drawings showing the mural wrapping around the school's circulation core"},
+  {s:"dreamhouse-04.jpg",p:"dreamhouse",t:"Photo",title:"Mural installation — painting from the scaffold",alt:"Photograph of the mural being painted from scaffolding inside the atrium"},
+  {s:"dreamhouse-05.jpg",p:"dreamhouse",t:"Photo",title:"Mural installation — scaffold view across the atrium",alt:"Photograph across the atrium during installation, scaffolding rising past the painted wave wall"},
+  {s:"dreamhouse-06.jpg",p:"dreamhouse",t:"Photo",title:"Mural installation — looking up the atrium",alt:"Photograph looking up through the atrium during installation, with the mural and red arcs overhead"},
+  /* Mala */
+  {s:"mala-01.jpg",p:"mala",t:"Render",title:"Life and growth inside the 'Mala — gardening level",alt:"Interior rendering of the Mala greenhouse level, arched structure with planting rows and figures gardening"},
+  {s:"mala-02.jpg",p:"mala",t:"Render",title:"Life on top of the 'Mala — play and flexibility",alt:"Rendering beneath the Mala's yellow arched canopy, figures reaching up toward hanging planters"},
+  {s:"mala-03.jpg",p:"mala",t:"Render",title:"Fish-eye rendering — a Mala in Ala Moana Beach Park",alt:"Wide fish-eye rendering of the Mala structures set in Ala Moana Beach Park, Honolulu"},
+  {s:"mala-04.jpg",p:"mala",t:"Artwork",title:"Illustration — community garden pods in Honolulu",alt:"Black-and-white illustration of the community garden pods set in the Honolulu landscape"},
+  {s:"mala-05.jpg",p:"mala",t:"Diagram",title:"Honolulu context — aerial study",alt:"Black-and-white aerial study of Honolulu with the garden sites marked in white"},
+  {s:"mala-06.jpg",p:"mala",t:"Photo",title:"Waikiki & Ala Moana — site panorama",alt:"Panoramic photograph of the Waikiki and Ala Moana shoreline, the Mala test site"},
+  {s:"mala-07.jpg",p:"mala",t:"Diagram",title:"Selection of possible large parklands in the hub of O'ahu",alt:"Map diagram selecting possible parklands across O'ahu for locating Mala high-tunnel gardening structures"},
+  {s:"mala-08.jpg",p:"mala",t:"Drawing",title:"Design proposal — the modular community garden in plan",alt:"Plan drawing of three modular Mala structures set in a landscaped park"},
+  {s:"mala-09.jpg",p:"mala",t:"Drawing",title:"Elevation — ready for harvest, midst / end of growing phase",alt:"Elevation drawing of the Mala at harvest time, planting full beneath the arched canopy and palm trees"},
+  {s:"mala-10.jpg",p:"mala",t:"Drawing",title:"Elevation — start / end of seasonal gardening",alt:"Elevation drawing of the Mala at the start of the season, planting sparse beneath the canopy"},
+  {s:"mala-11.jpg",p:"mala",t:"Drawing",title:"Plan — ground floor, gardening level",alt:"Ground floor plan of the Mala showing the gardening level, tool sheds and farmers-market openings"},
+  {s:"mala-12.jpg",p:"mala",t:"Drawing",title:"Plan — top floor, elevated playground courtyard",alt:"Top floor plan of the Mala showing the elevated playground courtyard and two agriculture classrooms"},
+  {s:"mala-13.jpg",p:"mala",t:"Research",title:"Crop-count research — 80 crops, feeding 765 people",alt:"Research table calculating crop counts per Mala and how many people the harvest could feed"},
+  {s:"mala-14.jpg",p:"mala",t:"Diagram",title:"Construction manual — building a Mala in 10 steps",alt:"Presentation board of the step-by-step Mala construction manual, ten illustrated steps"},
+  {s:"mala-15.jpg",p:"mala",t:"Diagram",title:"Distribution — tools, pollinators, manuals & plant stakes",alt:"Diagram board distributing the essential components and indicators of a Mala high-tunnel farming structure"},
+  /* Chelsea */
+  {s:"chelsea-01.jpg",p:"chelsea",t:"Photo",title:"Soda Can Model — the museum's physical model",alt:"Photograph of the Chelsea Pier museum physical model — the “Soda Can Model” — in soda cans, wood, acrylic and chipboard"},
+  {s:"chelsea-02.jpg",p:"chelsea",t:"Photo",title:"Transparent section study — held in hand",alt:"Photograph of a hand holding the museum's transparent etched section model against black"},
+  /* Playground */
+  {s:"playground-01.jpg",p:"playground",t:"Photo",title:"Model, plan view — sandbox, ball & toy, snack station",alt:"Top-down photograph of the playground model with yellow sandbox, red ball-and-toy area and blue snack station"},
+  {s:"playground-02.jpg",p:"playground",t:"Photo",title:"Study model — iteration with color program",alt:"Photograph of an early study model of the elevated playground with colored program areas"},
+  {s:"playground-03.jpg",p:"playground",t:"Photo",title:"Study model — iteration, aerial view",alt:"Aerial photograph of a white study model iteration of the elevated playground"},
+  {s:"playground-04.jpg",p:"playground",t:"Photo",title:"Study model — iteration, oblique view",alt:"Oblique photograph of a white study model iteration of the elevated playground"},
+  {s:"playground-05.jpg",p:"playground",t:"Photo",title:"Study model — final iteration with color",alt:"Photograph of the final study model with yellow, red and blue program areas in a metal frame"},
+  {s:"playground-06.jpg",p:"playground",t:"Drawing",title:"Hand-drawn bird's-eye view",alt:"Hand-drawn bird's-eye view of the elevated playground beside the Everson Museum"},
+  {s:"playground-07.jpg",p:"playground",t:"Drawing",title:"Hand-drawn plans & sections",alt:"Sheet of hand-drawn plans and sections of the elevated playground"},
+  /* Jewelry */
+  {s:"jewelry-01.jpg",p:"jewelry",t:"Photo",title:"Cosmic Hemodite — sterling silver pendant with onyx",alt:"Photograph of the sterling silver cosmic pendant with black onyx stones"},
+  {s:"jewelry-02.jpg",p:"jewelry",t:"Photo",title:"Suspended Pearl — sterling silver ring with lavender pearl",alt:"Photograph of the Suspended Pearl sterling silver ring cradling a lavender pearl"},
+  {s:"jewelry-03.jpg",p:"jewelry",t:"Photo",title:"The ring, worn",alt:"Photograph of the silver ring worn on a hand against a black background"},
+  {s:"jewelry-04.jpg",p:"jewelry",t:"Photo",title:"Process — cast silver pieces",alt:"Photograph of freshly cast silver jewelry pieces resting on a textured surface"},
+  {s:"jewelry-05.jpg",p:"jewelry",t:"Photo",title:"Process — soldering under the flame",alt:"Photograph of a silver piece glowing under the soldering flame, held in tweezers"},
+  {s:"jewelry-06.jpg",p:"jewelry",t:"Photo",title:"Process — assembling with pliers",alt:"Photograph of jewelry pieces being assembled with pliers on the workbench"},
+  /* Etc */
+  {s:"etc-01.jpg",p:"etc",t:"Photo",title:"Classroom reading tree — 'Iolani School",alt:"Photograph of a classroom built around a large reading tree at 'Iolani School, children reading beneath it"},
+  {s:"etc-02.jpg",p:"etc",t:"Render",title:"Café / office & daycare — axonometric model",alt:"Axonometric render of the café-office and daycare buildings with their covered corridor"},
+  {s:"etc-03.jpg",p:"etc",t:"Drawing",title:"Plan study",alt:"Hand-drawn plan study with a grid of circular elements"},
+  {s:"etc-04.jpg",p:"etc",t:"Model",title:"Facade study — 3D model",alt:"Digital 3D model of a curved, patterned facade study"},
+  {s:"etc-05.jpg",p:"etc",t:"Diagram",title:"Site plan — daycare & café / office, 1/32 scale",alt:"Rendered site plan of the daycare and café-office buildings at 1/32 scale"},
+  {s:"etc-06.jpg",p:"etc",t:"Drawing",title:"Structural wave study",alt:"Line drawing study of a repeating wave-like structural system"},
+  {s:"etc-07.jpg",p:"etc",t:"Diagram",title:"Plan study — in color",alt:"Colorful plan study with clustered circular program elements"},
+  {s:"etc-08.jpg",p:"etc",t:"Diagram",title:"Plan study — on black",alt:"Plan study rendered in white and color on a black background"},
+  {s:"etc-09.jpg",p:"etc",t:"Diagram",title:"Facade component studies",alt:"Diagram sheet of facade component and panel studies"},
+  /* --- reassembled logical pieces: each entry below is ONE complete image
+     exactly as a reader sees it in the portfolio — continuous boards,
+     diagrams and artworks kept whole, never split into PDF fragments --- */
+  {s:"logical/detroit-05.jpg",p:"detroit",t:"Diagram",title:"Site map — axial subdividing blocks & surviving buildings",alt:"Dark site map of Detroit showing axial subdividing blocks with currently surviving buildings, CMS marked in pink"},
+  {s:"logical/detroit-06.jpg",p:"detroit",t:"Diagram",title:"Site map — CMS train routes & subdividing neighborhoods",alt:"Dark site map showing CMS train routes in relation to the subdividing neighborhoods of Detroit"},
+  {s:"logical/detroit-07.jpg",p:"detroit",t:"Diagram",title:"Site map — Detroit building foreclosures",alt:"Dark site map of Detroit with yellow dots representing building foreclosures, CMS marked in pink"},
+  /* Detroit — Michigan Central Station as it used to be: 22 historic
+     photographs & postcards supplied by the author, shown together on
+     one spread (“How it used to be”), each kept whole, in the order
+     she sent them. Printed captions and credits inside the images
+     are part of the images and are not cropped out. */
+  {s:"detroit-hist-01.jpg",p:"detroit",t:"Photo",title:"Aerial view — the station, train sheds & Roosevelt Park",alt:"Historic aerial photograph of Michigan Central Station with its train sheds and Roosevelt Park laid out in front"},
+  {s:"detroit-hist-02.jpg",p:"detroit",t:"Photo",title:"Interior — the newsstand",alt:"Historic photograph of the newsstand inside Michigan Central Station"},
+  {s:"detroit-hist-03.jpg",p:"detroit",t:"Postcard",title:"Postcard — “New Michigan Central Station, Detroit, Mich.”",alt:"Colour postcard of the Michigan Central Station tower, captioned “New Michigan Central Station, Detroit, Mich.”"},
+  {s:"detroit-hist-04.jpg",p:"detroit",t:"Photo",title:"Waiting hall — chandeliers & passengers",alt:"Colour photograph of the station waiting hall with chandeliers and passengers"},
+  {s:"detroit-hist-05.jpg",p:"detroit",t:"Postcard",title:"Waiting hall — the green-ceiling postcard",alt:"Postcard of the waiting hall with its green coffered ceiling"},
+  {s:"detroit-hist-06.jpg",p:"detroit",t:"Photo",title:"Platform — an Amcoach train at the station",alt:"Photograph of an Amcoach train standing at the Michigan Central Station platform"},
+  {s:"detroit-hist-07.jpg",p:"detroit",t:"Photo",title:"Waiting hall — beneath the chandelier, “Tickets”",alt:"Black-and-white photograph of the waiting hall beneath a chandelier, the Tickets sign visible"},
+  {s:"detroit-hist-08.jpg",p:"detroit",t:"Photo",title:"Arched window — dark interior",alt:"Photograph of a tall arched window inside the dark station interior"},
+  {s:"detroit-hist-09.jpg",p:"detroit",t:"Photo",title:"Ticket hall — clock & chandelier",alt:"Photograph of the ticket hall with its clock and chandelier"},
+  {s:"detroit-hist-10.jpg",p:"detroit",t:"Postcard",title:"Postcard — tunnel approach to the train sheds",alt:"Postcard of the tunnel approach leading to the Michigan Central Station train sheds"},
+  {s:"detroit-hist-11.jpg",p:"detroit",t:"Photo",title:"The lunch counter — “The Union News Company”",alt:"Photograph of the station lunch counter signed “The Union News Company”"},
+  {s:"detroit-hist-12.jpg",p:"detroit",t:"Photo",title:"Concourse — beneath the skylights",alt:"Photograph of the concourse beneath the skylights of Michigan Central Station"},
+  {s:"detroit-hist-13.jpg",p:"detroit",t:"Photo",title:"Waiting room — rocking chairs & palms",alt:"Photograph of the waiting room with rocking chairs and potted palms"},
+  {s:"detroit-hist-14.jpg",p:"detroit",t:"Photo",title:"Departure gates — The Ambassador, The Detroiter, Empire State Express",alt:"Photograph of passengers at the departure gates under signs for The Ambassador, The Detroiter and the Empire State Express"},
+  {s:"detroit-hist-15.jpg",p:"detroit",t:"Photo",title:"Exterior — the tower & vintage cars",alt:"Historic photograph of the station tower with vintage cars parked in front"},
+  {s:"detroit-hist-16.jpg",p:"detroit",t:"Photo",title:"Aerial view — station & yards from above",alt:"Historic aerial photograph of Michigan Central Station and its rail yards"},
+  {s:"detroit-hist-17.jpg",p:"detroit",t:"Photo",title:"Exterior — from the road, young trees",alt:"Historic photograph of the station facade from the road, young trees in the foreground"},
+  {s:"detroit-hist-18.jpg",p:"detroit",t:"Photo",title:"The rail yard — steam locomotives",alt:"Photograph of steam locomotives in the rail yard behind the station"},
+  {s:"detroit-hist-19.jpg",p:"detroit",t:"Photo",title:"Roosevelt Park — lawn & sprinklers",alt:"Photograph of the lawn and sprinklers in Roosevelt Park in front of the station"},
+  {s:"detroit-hist-20.jpg",p:"detroit",t:"Photo",title:"Platform stairs — “Exit to Station”",alt:"Photograph of the platform stairs signed “Exit to Station — please watch your step”"},
+  {s:"detroit-hist-21.jpg",p:"detroit",t:"Photo",title:"Track gates — panorama",alt:"Panoramic photograph of the numbered track gates inside the station"},
+  {s:"detroit-hist-22.jpg",p:"detroit",t:"Postcard",title:"Postcard — “Concourse, Michigan Central Station, Detroit, Mich.”",alt:"Postcard of the station concourse, captioned “Concourse, Michigan Central Station, Detroit, Mich.”"},
+  /* Detroit — the station in its decrepit, abandoned state: 17
+     photographs supplied by the author, shown together on one
+     spread (“Decrepit state — abandoned”) immediately after the
+     historic spread, each kept whole, in the order she sent them. */
+  {s:"detroit-ruin-01.jpg",p:"detroit",t:"Photo",title:"Stripped interior — scissor lift & graffiti",alt:"Photograph of a stripped station interior with a green scissor lift and graffiti"},
+  {s:"detroit-ruin-02.jpg",p:"detroit",t:"Photo",title:"Rooftop graffiti — the downtown skyline",alt:"Photograph of graffiti on the station rooftop with the downtown Detroit skyline behind"},
+  {s:"detroit-ruin-03.jpg",p:"detroit",t:"Photo",title:"Rusted iron canopy — fenced off",alt:"Photograph of the rusted iron entrance canopy, fenced off"},
+  {s:"detroit-ruin-04.jpg",p:"detroit",t:"Photo",title:"Stone facade — barred arched windows",alt:"Photograph of the stone facade with barred arched windows"},
+  {s:"detroit-ruin-05.jpg",p:"detroit",t:"Photo",title:"Stripped hall — EXIT sign & scaffolding",alt:"Photograph of a stripped hall with an EXIT sign and scaffolding"},
+  {s:"detroit-ruin-06.jpg",p:"detroit",t:"Photo",title:"Coffered ceiling — holed & peeling",alt:"Photograph of the coffered ceiling, its octagonal coffers holed and peeling"},
+  {s:"detroit-ruin-07.jpg",p:"detroit",t:"Photo",title:"Scaffolding & a stripped, graffitied wall",alt:"Photograph of scaffolding against a stripped, graffitied station wall"},
+  {s:"detroit-ruin-08.jpg",p:"detroit",t:"Photo",title:"Colonnade corridor — graffiti & debris",alt:"Photograph of the colonnade corridor with graffiti-covered columns and debris"},
+  {s:"detroit-ruin-09.jpg",p:"detroit",t:"Photo",title:"Doorway into a debris-filled room",alt:"Photograph through a ruined doorway into a debris-filled room"},
+  {s:"detroit-ruin-10.jpg",p:"detroit",t:"Photo",title:"Great hall — exposed roof trusses & graffiti",alt:"Photograph of the great hall with its roof trusses exposed and graffiti on the walls"},
+  {s:"detroit-ruin-11.jpg",p:"detroit",t:"Photo",title:"Corridor — broken floor & debris",alt:"Photograph of a corridor with a broken, debris-covered floor"},
+  {s:"detroit-ruin-12.jpg",p:"detroit",t:"Photo",title:"Great hall — graffiti & a flooded floor",alt:"Photograph of the great hall, graffiti on the walls and water across the floor"},
+  {s:"detroit-ruin-13.jpg",p:"detroit",t:"Photo",title:"Colonnade — graffitied columns",alt:"Photograph of the colonnade, its great columns covered in graffiti"},
+  {s:"detroit-ruin-14.jpg",p:"detroit",t:"Photo",title:"Tiled hall — graffiti & a coiled hose",alt:"Photograph of a tiled hall with graffiti and a coiled hose on the floor"},
+  {s:"detroit-ruin-15.jpg",p:"detroit",t:"Photo",title:"Ceiling rosettes — peeling paint & exposed brick",alt:"Photograph of ceiling rosettes with peeling paint and exposed brick"},
+  {s:"detroit-ruin-16.jpg",p:"detroit",t:"Photo",title:"Empty office floor — concrete columns & windows",alt:"Photograph of an empty office floor in the tower, bare concrete columns and windows"},
+  {s:"detroit-ruin-17.jpg",p:"detroit",t:"Photo",title:"Empty office floor — second view",alt:"Second photograph of an empty office floor in the tower"},
+  {s:"detroit-collage.jpg",p:"detroit",t:"Artwork",u:1,title:"Detroit collage — the station, vintage Detroit & “Welcome to Fabulous Detroit”",alt:"Collage of Michigan Central Station beneath the word DETROIT, with 1920s figures, vintage cars and a “Welcome to Fabulous Detroit” sign"},
+  /* Detroit — three drawings supplied by the author, shown side by side
+     on their own spread immediately after the Thesis Prep Book spread
+     (see buildSpreads): pieces 47–49, in the order she sent them. */
+  {s:"detroit-drawing-fragment.jpg",p:"detroit",t:"Drawing",title:"Drawing — fragment + inhabitation",alt:"Architectural drawing collage annotated fragment + inhabitation, architecture as a field of forces, space between structures, section as experience, architecture as a political act"},
+  {s:"detroit-drawing-room01.jpg",p:"detroit",t:"Drawing",title:"Drawing — Room 01, car door as portal",alt:"Architectural drawing of a car door as Room 01, annotated threshold as infrastructure, a door becomes a room, car door as portal, WELCOME mat as threshold, repetition as system, light as orientation, section / spatial relationship"},
+  {s:"detroit-drawing-triangular.png",p:"detroit",t:"Drawing",title:"building intervention in Central Michigan Station office levels.",alt:"Architectural drawing with a triangular grid, annotated threshold as transition, vertical infrastructure as a system, light as orientation, structure as landscape, section as experience"},
+  /* Detroit — wide wireframe elevation supplied by the author, shown
+     at the top of spread 4 (the spread after the three-drawings
+     spread), above the Central Michigan Station rendering and the
+     digital model (pieces 1–2), in that order. */
+  {s:"detroit-elevation-wireframe.png",p:"detroit",t:"Drawing",title:"Wireframe elevation — Michigan Central Station",alt:"Wide wireframe elevation of Michigan Central Station in blue and red lines on a black background, with a low red intervention strip at the base"},
+  /* Detroit — two further drawings supplied by the author, shown
+     together as a pair on their own spread immediately after
+     spread 4 (see buildSpreads): pieces 51–52. The second is the
+     station plan with its blue lines recoloured to white at the
+     author's request; the red intervention lines and the black
+     background are unchanged in both. */
+  {s:"detroit-car-silhouettes.png",p:"detroit",t:"Drawing",title:"Car elements — intervention silhouette study",alt:"Grid of car-part silhouettes — steering wheels, seats, mirrors, wheels and body fragments — outlined in red on black across three white-banded rows, catalogued as intervention elements"},
+  {s:"detroit-plan-white.png",p:"detroit",t:"Drawing",title:"Station plan — intervention silhouettes in red, plan lines in white",alt:"Plan of Central Michigan Station, its train sheds and office tower drawn in white lines on black — recoloured from the original blue at the author's request — with red intervention silhouette elements placed through the building"},
+  {s:"logical/shell-15.jpg",p:"shell",t:"Photo",title:"Physical model — timber frame, end view",alt:"Photograph of the basswood Shell model from the end, showing the angled lattice facade"},
+  {s:"logical/shell-18.jpg",p:"shell",t:"Diagram",title:"Exploded diagram — mass timber structure of the Shell",alt:"Exploded axonometric diagram of the mass timber structure throughout the Shell research facility"},
+  {s:"logical/shell-operability.gif",p:"shell",t:"Animation",title:"Operability animation — the Shell opening & closing (the GIF behind the portfolio's QR code)",alt:"Animated GIF cycling through the Shell's operability sequence: the research center opening and closing in four states, the animation the portfolio's QR code linked to"},
+  {s:"logical/shell-20.jpg",p:"shell",t:"Render",title:"Perspective illustrations — life inside and outside the Shell",alt:"One collage of three perspective illustrations: the laboratory rooms, the central open-air greenhouse, and an external view from the street"},
+  {s:"logical/shell-sunny.jpg",p:"shell",t:"Drawing",title:"Sunny — axonometric illustration, the Shell open in good weather",alt:"Axonometric illustration labeled SUNNY: the Shell research center open in good weather, its fabric pavilion spread over the front yard, the marina calm behind it — one of the two scenarios the Shell will most likely encounter"},
+  {s:"logical/shell-stormy.jpg",p:"shell",t:"Drawing",title:"Stormy — axonometric illustration, the Shell closed against the storm",alt:"Axonometric illustration labeled STORMY: the same Shell research center closed up against storm weather, rain streaking over the marina — the second of the two scenarios the Shell will most likely encounter"},
+  {s:"logical/shell-program.png",p:"shell",t:"Diagram",o:1,title:"Programmatic distribution diagram",alt:"Programmatic distribution diagram of the Shell research center: offices and labs above the greenhouse and green space, the research center over the public ground floor"},
+  {s:"logical/izumo-04.jpg",p:"izumo",t:"Photo",title:"Joint 2 — Rice Paddy Structure detail",alt:"Detail photograph labeled Joint 2, showing the additive Taisha-zukuri layering of the wooden rice paddy structure"},
+  {s:"logical/izumo-05.jpg",p:"izumo",t:"Photo",title:"Joint 1 — Government Building detail",alt:"Detail photograph labeled Joint 1, showing the additive layering of imitative concrete on the government building"},
+  {s:"logical/dreamhouse-07.jpg",p:"dreamhouse",t:"Render",title:"Atrium renders — the mural in place, four views in one strip",alt:"A single vertical strip of four renders by Design Partners showing the Dreamhouse atrium and its mural from four viewpoints"},
+  {s:"logical/mala-16.jpg",p:"mala",t:"Diagram",title:"O'ahu from above — island context",alt:"Satellite view of the island of O'ahu, Hawai'i"},
+  {s:"logical/mala-17.jpg",p:"mala",t:"Research",title:"Interview board — Akamai Foods & the farmers markets",alt:"One research board gathering the Akamai Foods interview: market photographs, the vendor portrait and interview notes, kept whole"},
+  {s:"logical/mala-18.jpg",p:"mala",t:"Research",title:"Interview board — BK Farmyards, community gardener",alt:"One research board gathering the BK Farmyards interview: the gardener's portrait, market photographs and interview notes, kept whole"},
+  {s:"logical/mala-19.jpg",p:"mala",t:"Research",title:"Population count — Hawai'i & Honolulu",alt:"Research panel giving the population of the State of Hawai'i, 1,415,872 people, and the City and County of Honolulu, 974,563 people"},
+  {s:"logical/mala-20.jpg",p:"mala",t:"Render",title:"Plan rendering — a Mala from above",alt:"Top-down rendering of one Mala structure set in the green of Ala Moana Beach Park"},
+  {s:"logical/mala-21.jpg",p:"mala",t:"Diagram",title:"Mala count scenarios",alt:"A single row of five scenario cards calculating how many Malas would be necessary to feed Hawai'i and Honolulu"},
+  {s:"logical/mala-22.jpg",p:"mala",t:"Diagram",title:"Planting manual — one complete board",alt:"The complete planting manual board kept whole: crop terms, days from plant to harvest, bed lengths, seed spacing, months to plant and crop rotation for Hawaiian produce"},
+  {s:"logical/mala-24.jpg",p:"mala",t:"Diagram",title:"Wind directions & temperatures — January to June",alt:"One strip of six wind-rose diagrams with temperature boxes, January through June, as printed above the Mala elevations in the portfolio"},
+  {s:"logical/mala-25.jpg",p:"mala",t:"Diagram",title:"Wind directions & temperatures — July to December",alt:"One strip of six wind-rose diagrams with temperature boxes, July through December, as printed below the Mala plans in the portfolio"},
+  {s:"logical/chelsea-03.jpg",p:"chelsea",t:"Photo",title:"Study model — early iteration, view 1",alt:"Photograph of an early study model of the Chelsea Pier museum"},
+  {s:"logical/chelsea-04.jpg",p:"chelsea",t:"Photo",title:"Study model — early iteration, view 2",alt:"Photograph of an early study model of the Chelsea Pier museum from a second viewpoint"},
+  {s:"logical/chelsea-05.jpg",p:"chelsea",t:"Photo",title:"Study model — early iteration, view 3",alt:"Photograph of an early study model of the Chelsea Pier museum from a third viewpoint"},
+  {s:"logical/chelsea-06.jpg",p:"chelsea",t:"Photo",title:"Study model — early iteration, view 4",alt:"Photograph of an early study model of the Chelsea Pier museum from a fourth viewpoint"},
+  {s:"logical/chelsea-07.jpg",p:"chelsea",t:"Photo",title:"Study model — later iteration, view 1",alt:"Photograph of a later study model of the Chelsea Pier museum"},
+  {s:"logical/chelsea-08.jpg",p:"chelsea",t:"Photo",title:"Study model — later iteration, view 2",alt:"Photograph of a later study model of the Chelsea Pier museum from a second viewpoint"},
+  {s:"logical/chelsea-09.jpg",p:"chelsea",t:"Photo",title:"Study model — later iteration, view 3",alt:"Photograph of a later study model of the Chelsea Pier museum from a third viewpoint"},
+  {s:"logical/chelsea-10.jpg",p:"chelsea",t:"Photo",title:"Study model — later iteration, view 4",alt:"Photograph of a later study model of the Chelsea Pier museum from a fourth viewpoint"},
+  {s:"logical/chelsea-11.jpg",p:"chelsea",t:"Diagram",title:"Timeline board — Chelsea Pier history, 1910–1995",alt:"One timeline board narrating Chelsea Pier history from 1910 to 1995 in thirteen numbered entries with historic photographs, kept whole"},
+  {s:"logical/chelsea-12-13.jpg",p:"chelsea",t:"Drawing",title:"Elevations & axonometric — one board: historic documents in place, the museum in its High Line context",alt:"One combined board as printed in the portfolio: four elevation diagrams showing where the historic documents sit inside the museum, beside the axonometric drawing of the museum among the towers beside the High Line, with a zoomed inset of the museum itself"},
+  {s:"logical/playground-08.jpg",p:"playground",t:"Photo",title:"Study model — iteration, oblique view",alt:"Photograph of a white study model iteration of the elevated playground, oblique view"},
+  {s:"logical/playground-09.jpg",p:"playground",t:"Photo",title:"Study model — iteration, second oblique view",alt:"Photograph of a white study model iteration of the elevated playground from another angle"},
+  {s:"logical/playground-10.jpg",p:"playground",t:"Photo",title:"Study model — iteration with color, plan view",alt:"Top-down photograph of a study model iteration with yellow, red and blue program areas"},
+  {s:"logical/playground-11.jpg",p:"playground",t:"Photo",title:"Study model — iteration, plan view",alt:"Top-down photograph of a white study model iteration of the elevated playground"},
+  {s:"logical/playground-12.jpg",p:"playground",t:"Photo",title:"Study model — iteration, plan view detail",alt:"Top-down photograph of a white study model iteration of the elevated playground, closer view"},
+  {s:"logical/jewelry-07.jpg",p:"jewelry",t:"Photo",title:"Process — sawing the silver",alt:"Photograph of a silver jewelry piece being sawn on the jeweler's bench"},
+  {s:"logical/jewelry-08.jpg",p:"jewelry",t:"Photo",title:"Process — polishing at the machine",alt:"Photograph of a jewelry piece being held at the polishing machine"},
+  {s:"logical/jewelry-10.jpg",p:"jewelry",t:"Photo",title:"Process — cast pieces resting in the tray",alt:"Photograph of cast silver jewelry pieces resting in a tray"},
+  {s:"logical/etc-10.jpg",p:"etc",t:"Render",title:"Exterior render — house with patterned glass facade",alt:"Render of a house exterior with blue wave-patterned glass panels"},
+  {s:"logical/etc-11.jpg",p:"etc",t:"Diagram",title:"Facade pattern study — wave-motif panels",alt:"Close study of facade panels carrying a black-and-white wave motif"},
+  {s:"logical/etc-12.jpg",p:"etc",t:"Render",title:"Exterior render — house in its landscape",alt:"Render of a low house with patterned glass set in a green landscape"},
+  {s:"logical/etc-13.jpg",p:"etc",t:"Drawing",title:"Elevation study — lattice gable",alt:"Elevation drawing of a gabled facade filled with a branching lattice"},
+  {s:"logical/etc-14.jpg",p:"etc",t:"Artwork",title:"Circular artwork — fisheye interior",alt:"Circular fisheye artwork of a dark interior space"},
+  {s:"logical/etc-15.jpg",p:"etc",t:"Render",title:"Wall render — night view",alt:"Wide render of a long decorated wall at night with figures in front of it"},
+  {s:"logical/etc-16.jpg",p:"etc",t:"Render",title:"Wall render — garden wall with surfer, day view",alt:"Wide render of a long garden wall in daylight with a surfer walking past"},
+  {s:"logical/etc-17.jpg",p:"etc",t:"Diagram",title:"Plan artwork — circular cluster on black",alt:"Circular clustered plan artwork rendered on a black background"},
+  {s:"logical/etc-19.jpg",p:"etc",t:"Diagram",title:"Research board — program diagram & data tables",alt:"One research board combining a program diagram, a colour-coded chart and data tables, kept whole"},
+  {s:"logical/etc-20.jpg",p:"etc",t:"Artwork",title:"Poster artwork — figure with orange lettering",alt:"Poster-style artwork of a figure seen from below against large orange lettering"},
+  {s:"logical/etc-22.jpg",p:"etc",t:"Render",title:"Interior render — cave-like exhibition space",alt:"Interior render of a cave-like exhibition space with figures and a green floor form"},
+  {s:"logical/etc-23.jpg",p:"etc",t:"Drawing",title:"Axonometric drawing — building cluster",alt:"Line axonometric drawing of a cluster of buildings on a sloping site"},
+  {s:"logical/etc-24.jpg",p:"etc",t:"Photo",title:"Material study — sand & water surface",alt:"Photograph of a shallow sand and water surface study"},
+  {s:"logical/etc-25.jpg",p:"etc",t:"Diagram",title:"Component board — circular medallions",alt:"One board of circular medallion components arranged in a grid, kept whole"},
+  {s:"logical/etc-26.jpg",p:"etc",t:"Diagram",title:"Site study — aerial plan in greyscale",alt:"Greyscale aerial site plan study with roads and building footprints"},
+  {s:"logical/etc-28.jpg",p:"etc",t:"Photo",title:"Model photo — structural study, view 1",alt:"Photograph of a grey structural model study"},
+  {s:"logical/etc-29.jpg",p:"etc",t:"Photo",title:"Model photo — structural study, view 2",alt:"Photograph of a grey structural model study from a second viewpoint"},
+  {s:"logical/etc-30.jpg",p:"etc",t:"Photo",title:"Material detail — curved wood & shadow",alt:"Photograph of curved laminated wood with lattice shadows across it"},
+  {s:"logical/etc-31.jpg",p:"etc",t:"Diagram",title:"Logo study — dotted medallion",alt:"A dotted circular medallion logo study"},
+  {s:"logical/etc-33.jpg",p:"etc",t:"Diagram",title:"Study sheet — circular plan studies",alt:"Sheet of small circular plan studies arranged in a grid"},
+  {s:"logical/etc-34.jpg",p:"etc",t:"Render",title:"Pavilion render — wave structure on the water",alt:"Render of a ribbed wave-like pavilion structure at the water's edge"},
+  {s:"logical/etc-35.jpg",p:"etc",t:"Diagram",title:"Facade strip — long patterned elevation",alt:"A long thin facade elevation strip with a dense vertical pattern"},
+  {s:"logical/etc-36.jpg",p:"etc",t:"Drawing",title:"Elevation studies — wave structure, long section",alt:"Long sectional elevation studies of a wave-like structure, kept as one strip"},
+  {s:"logical/etc-37.jpg",p:"etc",t:"Photo",title:"Material strip — wood bench, top view",alt:"Top view of a long wooden bench or plank surface"},
+  {s:"logical/etc-38.jpg",p:"etc",t:"Drawing",title:"Bench study — long elevation",alt:"Long elevation drawing of a wooden bench structure"},
+  {s:"logical/etc-39.jpg",p:"etc",t:"Drawing",title:"Plan drawing — site & buildings",alt:"Line plan drawing of a site with oval planting beds and two buildings"},
+  {s:"logical/etc-40.jpg",p:"etc",t:"Diagram",title:"Vertical collage — stacked model fragments",alt:"A tall, faint vertical collage of small model fragments"},
+  /* --- work samples: each entry is ONE complete image from the June 2026
+     work samples PDF, kept whole. The Wynn and Tisch rendering credits
+     are Ellie's own disclaimers from that PDF, carried on every piece
+     they cover (field "n"). --- */
+  {s:"work/wynn-01.jpg",p:"wynn",t:"Render",n:"Disclaimer: The renderings are not my work and are included as reference only",title:"Rendering — the tower at dusk",alt:"Rendering of the Wynn Al Marjan Island tower rising over the resort terraces at dusk — a reference rendering, not the author's own work"},
+  {s:"work/wynn-02.jpg",p:"wynn",t:"Photo",title:"Construction aerial — the resort taking shape",alt:"Aerial construction photograph of the Wynn tower under construction on the island shoreline, cranes above the podium"},
+  {s:"work/wynn-03.jpg",p:"wynn",t:"Render",n:"Disclaimer: The renderings are not my work and are included as reference only",title:"Rendering — the grand entrance",alt:"Rendering of the Wynn resort's grand arched entrance framed by palm trees, a car arriving — a reference rendering, not the author's own work"},
+  {s:"work/wynn-04.jpg",p:"wynn",t:"Render",n:"Disclaimer: The renderings are not my work and are included as reference only",title:"Rendering — the island from the air",alt:"Aerial rendering of Wynn Al Marjan Island, the tower and resort pools surrounded by the sea — a reference rendering, not the author's own work"},
+  {s:"work/tisch-01.jpg",p:"tisch",t:"Photo",title:"The existing Mount Sinai building",alt:"Photograph of the existing Mount Sinai hospital building on the Upper East Side before its adaptive reuse"},
+  {s:"work/tisch-02.png",p:"tisch",t:"Render",n:"Disclaimer: The renderings are to be accredited to KPF",title:"Rendering — the main facade",alt:"Rendering of the Tisch Cancer Hospital's main facade with its vertical fins — rendering accredited to KPF"},
+  {s:"work/tisch-03.jpg",p:"tisch",t:"Drawing",title:"Floor plan — inpatient floor, patient rooms & nursing stations",alt:"Floor plan of an inpatient floor at Tisch Cancer Hospital, laying out patient rooms, nursing stations and technical medical areas"},
+  {s:"work/tisch-04.jpg",p:"tisch",t:"Drawing",title:"Floor plan — inpatient floor, second arrangement",alt:"Floor plan of a second inpatient floor arrangement at Tisch Cancer Hospital, with patient rooms and support spaces"},
+  {s:"work/tisch-05.jpg",p:"tisch",t:"Render",n:"Disclaimer: The renderings are to be accredited to KPF",title:"Rendering — corner view, sky garden marked",alt:"Rendering of the Tisch Cancer Hospital corner with the sky garden bay outlined — rendering accredited to KPF"},
+  {s:"work/tisch-06.jpg",p:"tisch",t:"Drawing",title:"Wall section detail — exterior assembly",alt:"Wall section detail drawing of the Tisch Cancer Hospital exterior assembly, with dimensions and material notes"},
+  {s:"work/crown-01.jpg",p:"crown",t:"Render",title:"Salon render — vanity & glass wardrobes",alt:"Render of the Crown Residence salon, a lit vanity mirror along one wall and glass-fronted wardrobes along the other"},
+  {s:"work/crown-02.jpg",p:"crown",t:"Render",title:"Closet render — marble island & chandelier",alt:"Render of the Crown Residence walk-in closet, a marble island at its centre beneath a branching chandelier"},
+  {s:"work/crown-03.jpg",p:"crown",t:"Render",title:"Plan views — the salon & closet from above",alt:"One image holding two top-down rendered views of the Crown Residence salon and closet, kept together as a single piece"},
+  {s:"work/crown-04.jpg",p:"crown",t:"Render",title:"Salon & closet — wide interior render",alt:"Wide render across the Crown Residence salon and closet, shelving, glass wardrobes and the vanity in one sweep"},
+  {s:"work/crown-05.jpg",p:"crown",t:"Drawing",title:"Floor plan — the combined unit, salon & closet outlined",alt:"Floor plan of the combined Crown Residence unit, the proposed salon and closet expansion outlined within the existing apartment"},
+  {s:"work/crown-06.jpg",p:"crown",t:"Render",title:"Closet render — from the wardrobe wall",alt:"Render inside the Crown Residence closet looking along the wardrobe wall toward the island and chandelier"},
+  {s:"work/sontag-01.jpg",p:"sontag",t:"Render",title:"Dining room render — garden wallpaper",alt:"Render of the Sontag Residence dining room, eight chairs around the table against green garden-patterned wallpaper"},
+  {s:"work/sontag-02.jpg",p:"sontag",t:"Photo",title:"Cornice & ceiling — with its molding profile",alt:"Photograph of the Sontag Residence's stepped ceiling cornice, shown together with the molding profile drawing in one image"},
+  {s:"work/sontag-03.jpg",p:"sontag",t:"Drawing",title:"Wall section detail — bathroom & finishes build-up",alt:"Tall wall section detail from the Sontag Residence CD set, layering tile, stone shelf, slab and waterproofing with notes"},
+  {s:"work/sontag-04.jpg",p:"sontag",t:"Drawing",title:"Detail drawing — paneling & door head",alt:"Detail drawing from the Sontag Residence CD set showing wall paneling, stud framing and a door head assembly"},
+  {s:"work/sontag-05.jpg",p:"sontag",t:"Drawing",title:"Interior elevations — bathroom & vanity wall",alt:"Interior elevation drawings of the Sontag Residence bathroom and vanity wall, with fixtures and dimensions"},
+  {s:"work/sontag-06.jpg",p:"sontag",t:"Drawing",title:"Interior elevations — dining room window wall",alt:"Interior elevation drawings of the Sontag Residence dining room window wall and paneling"},
+  {s:"work/acoustic-01.jpg",p:"acoustic",t:"Drawing",title:"Initial sketch",alt:"Faint pencil sketch studies for the auditorium research, figures and section ideas on one sheet"},
+  {s:"work/acoustic-02.jpg",p:"acoustic",t:"Diagram",title:"Initial diagram — street, me / we, performer & viewer",alt:"Initial diagram for the auditorium studies: a wavy line between street and reality above, and the street / me-we banner diagram below"},
+  {s:"work/acoustic-03.jpg",p:"acoustic",t:"Diagram",title:"Typology diagram — Forest Theater, Dallas, TX",alt:"Typology diagram for the Forest Theater in Dallas: section, seating diagram for 1,400 seats marked performer and viewer, and the theater's data caption, kept whole as one image"},
+  {s:"work/acoustic-04.jpg",p:"acoustic",t:"Diagram",title:"Final diagram — the theater, street to stage",alt:"Final diagram of the auditorium research: a historic theater interior with the street / me-we banner flowing through it, performer and viewer marked and legended"},
+  {s:"work/acoustic-05.jpg",p:"acoustic",t:"Diagram",title:"Auditorium typologies — seven theaters compared",alt:"One typology strip comparing seven auditoriums — Forest Theater, Eccles Theater, BYU Theater, YouTube Theater, Capitol Theater, Country Music Hall of Fame Theater and Abravanal Hall — each with its section and data, kept whole"},
+  {s:"work/etcwork-01.jpg",p:"etcwork",t:"Render",title:"Amancaya, Exuma — beachfront villas (HKS)",alt:"Rendering of the Amancaya resort villas along a white sand beach in Exuma, The Bahamas"},
+  {s:"work/etcwork-02.jpg",p:"etcwork",t:"Render",title:"Al Rabita, Mina Valley — master plan (HKS)",alt:"Rendering of the Al Rabita master plan proposal in Mina Valley, Saudi Arabia, angular stone-clad buildings around a central water court"},
+  {s:"work/etcwork-03.jpg",p:"etcwork",t:"Render",title:"Lajcaj, New York — millwork addition (JMA)",alt:"Rendering of the Lajcaj residential millwork addition on the Upper East Side, lit shelving and display niches"}
+];
+
+
+
+/* ---------- assemble piece lists from the logical-image entries above:
+   one entry = one complete image as it appears in the portfolio ------- */
+ALL_PROJECTS.forEach(function(pr){
+  pr.pieces = [];
+  ITEMS.forEach(function(it){
+    if (it.p === pr.id) pr.pieces.push({ src:"assets/"+it.s, title:it.title, alt:it.alt, meta:it.t+" · "+pr.title, kind:it.t, note:it.n || null, opening: it.o===1, openfull: it.o===2, underhero: it.u===1 });
+  });
+});
+var TOTAL = PROJECTS.reduce(function(a,pr){ return a+pr.pieces.length; },0);
+document.getElementById("countLine").textContent =
+  PROJECTS.length + " projects · " + TOTAL + " pieces — every distinct image from the PDF, each kept whole, plus the station photographs the author added to Detroit";
+var WORK_TOTAL = WORK_PROJECTS.reduce(function(a,pr){ return a+pr.pieces.length; },0);
+document.getElementById("countLineWork").textContent =
+  WORK_PROJECTS.length + " projects · " + WORK_TOTAL + " pieces — every distinct image from the June 2026 work samples PDF, each kept whole";
+
+/* ---------- index grids ---------- */
+function cardFor(pr){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "pcard";
+  b.setAttribute("aria-label","Open project "+pr.num+": "+pr.title);
+  b.innerHTML =
+    '<span class="imgbox"><img loading="lazy" src="'+pr.hero+'" alt="" /></span>' +
+    '<p class="num">'+pr.num+'</p>' +
+    '<p class="cap"><b>'+pr.title+'</b><br />'+pr.sub+'<br />'+pr.pieces.length+' pieces</p>' +
+    (pr.cardNote ? '<span class="cardnote">'+pr.cardNote+'</span>' : '');
+  b.addEventListener("click", function(){ openProject(pr.id, 0, true); });
+  return b;
+}
+var gridArch = document.getElementById("gridArch");
+var gridEtc = document.getElementById("gridEtc");
+["detroit","shell","mala","izumo","dreamhouse","chelsea","playground"].forEach(function(id){
+  gridArch.appendChild(cardFor(projById(id)));
+});
+/* Order and numbers are the author's, set 2026-10-26: Detroit 01,
+   Shell 02, Mala 03, Izumo 04, Dreamhouse 05, Chelsea 06,
+   Playground 07, then Jewelry 08 and Etc. 09 in the grid below.
+   The portfolio's old 08 (HKS Architects Work, no pages in the
+   school PDF) is not shown; the sequence was closed up so the
+   nine shown projects run 01–09 with no gap. */
+["jewelry","etc"].forEach(function(id){
+  gridEtc.appendChild(cardFor(projById(id)));
+});
+var gridWork = document.getElementById("gridWork");
+WORK_PROJECTS.forEach(function(pr){ gridWork.appendChild(cardFor(pr)); });
+function projById(id){ for (var i=0;i<ALL_PROJECTS.length;i++) if (ALL_PROJECTS[i].id===id) return ALL_PROJECTS[i]; return null; }
+function projIndex(id){ for (var i=0;i<ALL_PROJECTS.length;i++) if (ALL_PROJECTS[i].id===id) return i; return 0; }
+function secList(pr){ return pr.sec === "work" ? WORK_PROJECTS : PROJECTS; }
+function nextOf(pr){
+  var L = secList(pr);
+  for (var i=0;i<L.length;i++) if (L[i].id===pr.id) return L[i+1] || null;
+  return null;
+}
+function secName(pr){ return pr.sec === "work" ? "Work Samples" : "School Portfolio"; }
+
+/* ---------- section switching on the index ---------- */
+var curSec = "school";
+function applySection(sec, push){
+  curSec = sec;
+  document.getElementById("secSchool").hidden = (sec !== "school");
+  document.getElementById("secWork").hidden = (sec !== "work");
+  document.getElementById("tabSchool").setAttribute("aria-pressed", sec === "school" ? "true" : "false");
+  document.getElementById("tabWork").setAttribute("aria-pressed", sec === "work" ? "true" : "false");
+  if (push){ try{ history.pushState({},"", sec === "work" ? "#work" : "#school"); }catch(e){} }
+}
+document.getElementById("tabSchool").addEventListener("click", function(){ applySection("school", true); });
+document.getElementById("tabWork").addEventListener("click", function(){ applySection("work", true); });
+
+/* ---------- paged project view ----------
+   Spread 0 is the opening spread. Later spreads chunk the pieces with a
+   repeating rhythm: pair (2), four-grid (4), single (1), trio (3).      */
+var CHUNKS = [2,4,1,3];
+var cur = { id:null, spread:0, spreads:[] };
+
+/* ---------- hand-set spread plans ----------
+   For these projects the spreads follow the portfolio's own page
+   groupings instead of the automatic rhythm. A plan is a list of
+   spreads; each spread is a list of rows; each row lists piece
+   numbers (0-based, in the project's piece order) shown together.
+   A row written ["wide", i] shows piece i alone, expanded to the
+   full width of the spread.
+   Detroit: the three dark site maps share one spread. Two
+   further spreads close the project, both headed (see
+   SPREAD_HEADS): “How it used to be” — the 22 historic
+   photographs & postcards of Michigan Central Station supplied
+   by the author (pieces 8–29), three to a row with the last one
+   alone — and “Decrepit state — abandoned” — her 17 photographs
+   of the station in its abandoned state (pieces 30–46), three
+   to a row with a final pair. Every supplied image appears
+   exactly once, whole, in the order she sent them. One further
+   piece — the author's Detroit collage (piece 47) — is not in
+   the plan: flagged u:1, it sits on the opening spread directly
+   beneath the hero image. And one further spread, the Thesis
+   Prep Book (see PREP_SPREADS), is spliced in by buildSpreads
+   immediately after the opening spread, and one further spread
+   — the author's three drawings (pieces 48–50), side by side
+   in one row — is spliced in immediately after that, before
+   the former spread 3, so Detroit has 50 pieces over 9
+   spreads in all.
+   Shell: the opening page carries the main illustration with the
+   programmatic distribution diagram directly beneath it in the
+   same column, and the hurricane shutter typology chart full-width
+   below — the typology and the isometric main illustration share
+   the portfolio's own first Shell page (pp.05–06). The operability
+   GIF — the animation the portfolio's QR code linked to, in place
+   of the QR code itself — stands alone on the spread immediately
+   after the opening; the isometric section cuts stand alone next;
+   Sectional Perspectives A & B share one spread, stacked as
+   printed on pp.07–08; the four physical-model photographs share
+   one spread; the two section details share one spread with the
+   exploded mass-timber structure diagram; and the perspective
+   illustrations close the project on their own expanded spread.
+   The programmatic diagram (flagged o:1) and the typology chart
+   (flagged o:2) are rendered on the opening spread itself and are
+   not in the plan; the main illustration (piece 1) is the opening
+   hero and is likewise not repeated in the plan. The diagram image
+   is the actual cutout of the printed diagram from the school
+   portfolio PDF (p.07): the stacked bars, their labels and the
+   printed caption, taken straight from the PDF's own vector
+   placement at the diagram's exact bounds — not the screenshot
+   supplied earlier. RESTORED at the author's request: the Sunny
+   and Stormy axonometric illustrations (portfolio pp.15–16,
+   PDF p.9 — “the Two Scenarios the Shell will most likely
+   encounter: Sunny vs Stormy weather conditions”) are back as
+   pieces 15 & 16, cut as the two labeled halves of the PDF's
+   single placed image and paired on ONE spread (plan entry
+   [[14,15]]), immediately before the perspective illustrations;
+   an earlier build had deleted them in error as “aerial
+   axonometrics”. The only aerial view that stays removed is the
+   separate bird's-eye aerial view of the Shell from the water;
+   the top-down main illustration and the operability GIF are
+   kept. Shell therefore has 17 pieces over 8 spreads. Izumo: the two photo + joint pairings of
+   pp.17–18 share one spread, paired as printed — Rice Paddy
+   Structure with Joint 2 above, Government Building with Joint 1
+   below. Dreamhouse: the wrap-around elevation (piece 3) stands
+   alone; the three installation photographs (pieces 4–6) share
+   one spread. Mala: the linear elevations & plans (pieces 9–12)
+   share one spread; the wind-direction & temperature strips
+   (pieces 23 & 24) share one spread but are stacked one below the
+   other, never side by side; the two interview boards (pp.25–26)
+   share one spread; the pp.31–32 research spread stays together
+   (population count, crop table, plan rendering, count scenarios,
+   fish-eye rendering); and each manual — planting, construction,
+   tools / pollinators / stakes locators — stands alone on its own
+   spread, and spread 9 (the pp.31–32 research grouping:
+   population count, crop table, plan rendering, count
+   scenarios, fish-eye rendering) is headed by a fully RETYPED
+   diagram — see MALA_TYPED below — because the printed table
+   text is too small to read in the source images; the original
+   images of that spread follow the retyped diagram on the same
+   spread, unchanged. Chelsea (revised): the former spread 2 —
+   the pair [[0,1]], piece 1 (the Soda Can Model, the opening
+   hero, still on the opening spread, now with its printed title
+   “Soda Can Model” captioned directly below it there) and
+   piece 2 (the transparent section study, held in hand) — is
+   REMOVED at the author's request, so piece 2 no longer appears
+   in the project; the eight study-model photographs (pieces
+   3–10) share one spread; and the former spreads 4 & 5 — the
+   timeline board (piece 11) and the elevations & axonometric
+   board (pieces 12 & 13, a single combined image) — are now
+   combined on ONE spread, stacked in that order, each shown
+   whole. Chelsea therefore has 3 spreads. Etc. Works (revised):
+   the ENTIRE project is on its opening spread only — plan
+   empty, all 36 pieces rendered there via OPEN_EXTRA, like
+   Jewelry. Playground: study models 2, 8 & 9 share one spread.
+   Acoustic Research: the Final Diagram stands alone on its own
+   spread, as do the Forest Theater typology and the seven-theater
+   typology strip.
+   Playground (revised): the former spreads 3, 4 & 5 — spread 3
+   (study models 2, 8 & 9, pieces 2/8/9), spread 4 (study models
+   3, 4 & 5, pieces 3/4/5) and spread 5 (study models 10, 11 & 12,
+   pieces 10/11/12) — are merged into ONE spread, in that order:
+   spread 3's trio on top, then spread 4's trio, then spread 5's
+   trio stacked below it (stacked, not side by side: two trios
+   side by side would shrink every model photo well below its
+   native size). Playground therefore has two fewer spreads
+   than before, with no piece lost or duplicated, and the
+   earlier rotations are untouched (piece 1 clockwise to match
+   the PDF; pieces 6 & 7 counter-clockwise).
+   Jewelry (revised): the ENTIRE project is ONE spread only,
+   mirroring the portfolio PDF's single Jewelry spread (PDF
+   p.27, printed pp.55–56) — its plan is empty, so the project
+   has no paged spreads at all; every piece is rendered on the
+   opening spread itself via OPEN_EXTRA below (see there).   */
+var PLANS = {
+  detroit: [ [["wide",50],[0,1]], [[2]], [[3]], [[4,5,6]],
+             [[7,8,9],[10,11,12],[13,14,15],[16,17,18],[19,20,21],[22,23,24],[25,26,27],[28]],
+             [[29,30,31],[32,33,34],[35,36,37],[38,39,40],[41,42,43],[44,45]] ],
+  shell:   [ [[12]], [[1]], [[2],[3]], [[5,6,7,10]],
+             [[8,9,11]], [[14,15]], [["wide",13]] ],
+  izumo:   [ [[2,3],[1,4]] ],
+  dreamhouse: [ [[0,1]], [[2]], [[3,4,5]], [[6]] ],
+  mala:    [ [[0,1]], [[3,15,4,5]], [[6]], [[7]], [[8,9,10,11]],
+             [[22],[23]], [[16,17]], [[18,12],[19,20],[2]],
+             [[21]], [[13]], [[14]] ],
+  chelsea: [ [[2,3,4,5],[6,7,8,9]], [[10],[11]] ],
+  playground: [ [[0]], [[1,7,8],[2,3,4],[9,10,11]], [[5,6]] ],
+  jewelry: [],
+  etc: [],
+  acoustic: [ [[0,1]], [[2]], [[3]], [[4]] ]
+};
+
+/* ---------- pieces rendered on a project's opening spread ----------
+   Jewelry & Etc. Works: in the portfolio PDF the Jewelry Making section
+   is a single spread (PDF p.27, printed pp.55–56) holding the
+   text and every image together — pendant top-left, the
+   Suspended Pearl ring top-right, and a bottom strip of six
+   process photographs running left to right (sawing, polishing,
+   cast pieces, soldering under the flame, cast pieces in the
+   tray, assembling with pliers), with the ring worn on a hand
+   at the bottom-right corner. On this site the pendant (piece 1)
+   is the opening hero, so OPEN_EXTRA adds the remaining pieces
+   to that same single spread, in the PDF's relative order:
+   row 1 pairs the two finished-ring views that sit on the PDF's
+   right side — the Suspended Pearl ring (piece 2) and the ring
+   worn (piece 3, shown whole here rather than cut off at the
+   PDF page edge); row 2 is the process strip in its exact
+   printed left-to-right order — sawing (7), polishing (8),
+   cast pieces (4), soldering (5), cast pieces in the tray (9),
+   assembling with pliers (6). Each piece appears exactly once
+   across the project, shown whole at no more than native size. */
+var OPEN_EXTRA = {
+  jewelry: [ [1,2], [6,7,3,4,8,5] ],
+  /* Etc. Works: at the author's request the whole project sits on
+     its main page, spread 1 — the hero (piece 1, the classroom
+     reading tree) plus every remaining piece below in project
+     order, three to a row (the last row holds the final two).
+     All 36 Etc. pieces appear exactly once, on this one spread:
+     pieces 2–4 (café/office & daycare axonometric, plan study,
+     facade study), piece 5 (the 1/32-scale site plan of the
+     daycare & café/office), and every later study through
+     piece 36. */
+  etc: [ [1,2,3], [4,5,6], [7,8,9], [10,11,12], [13,14,15],
+         [16,17,18], [19,20,21], [22,23,24], [25,26,27],
+         [28,29,30], [31,32,33], [34,35] ]
+};
+
+/* ---------- headed spreads ----------
+   A few paged spreads carry their own heading, set here by
+   project id and spread index (spread 0 is always the opening).
+   Detroit's two closing spreads are the author's own pairing:
+   the station as it used to be, then the station abandoned.
+   Detroit's Thesis Prep Book spread (index 1) is inserted by
+   buildSpreads ahead of the planned spreads, and the three-
+   drawings spread (index 2) is inserted immediately after it;
+   the car-elements silhouette spread (index 4) is inserted
+   after spread 4, so Detroit's headed spreads sit at indices
+   8 and 9. */
+var SPREAD_HEADS = {
+  detroit: {
+    8: { k:"Central Michigan Station · Detroit",
+         t:"how it used to be",
+         p:"Historic photographs & postcards of the station in its prime — the waiting rooms, concourse, gates and platforms as they were." },
+    9: { k:"Central Michigan Station · Detroit",
+         t:"decrepit state — abandoned",
+         p:"The same station in its abandoned state — stripped, graffitied and flooded halls, and the tower's empty office floors." }
+  }
+};
+function spreadHeadHTML(pr){
+  var heads = SPREAD_HEADS[pr.id];
+  if (!heads || !heads[cur.spread]) return '';
+  var hd = heads[cur.spread];
+  return '<header class="spread-head"><p class="sh-kick">'+hd.k+'</p><h3>'+hd.t+'</h3>' +
+    (hd.p ? '<p class="sh-sub">'+hd.p+'</p>' : '') + '</header>';
+}
+
+/* ---------- Mala spread 9, retyped ----------
+   A faithful transcription of the printed pp.31–32 research
+   spread (“Researching Necessary Quantity of the ‘Malas’…”),
+   checked twice against the school portfolio PDF (PDF p.17):
+   every crop row below satisfies seeds × bed length = # crops
+   and plant-per-person low end × people fed = # crops as
+   printed, and the feed column sums to the printed total
+   765.46667. The scenario calculations were likewise checked
+   arithmetically. Nothing is reworded or renumbered; the
+   heading keeps the portfolio's own spelling. Rendered as the
+   main content of Mala spread 9 (spread index 8), above the
+   spread's original images, which stay on the same spread. */
+var MALA_CROPS = [
+  ["Beet",20,30,600,"20-30","30"],
+  ["Broccoli",2,10,20,"3-5","6.666666667"],
+  ["Cabbage (Chinese)",3,10,30,"2-4","25"],
+  ["Cabbage Head",3,10,30,"2-4","15"],
+  ["Cabbage Spoon",12,20,240,"2-4","120"],
+  ["Celery",10,15,150,"3-5","50"],
+  ["Chard",5,5,25,"3-5","8.333333333"],
+  ["Lettuce",16,15,240,"5-6","48"],
+  ["Mustard (Chinese)",16,15,240,"5-6","48"],
+  ["Onion",30,10,300,"15-20","20"],
+  ["Parsley",15,2,30,"1","30"],
+  ["Spinach (New Zealand)",3,8,24,"5-6","4.8"],
+  ["Carrot",40,25,1000,"20-30","50"],
+  ["Daikon",20,10,200,"20-30","10"],
+  ["Radish",40,4,160,"20-30","8"],
+  ["Turnip",30,8,240,"10-20","24"],
+  ["Bean (Bush Green)",5,50,250,"10-15","25"],
+  ["Bean (Pole Green)",3,15,45,"2-5","22.5"],
+  ["Bean (Bush Lima)",4,30,120,"10-15","12"],
+  ["Bean (Pole Lima)",4,30,120,"2-5","60"],
+  ["Cowpea (Bush)",4,20,80,"10-15","8"],
+  ["Cowpea (Pole)",3,15,45,"2-5","22.5"],
+  ["Peas (Chinese Edible)",12,25,300,"10-20","30"],
+  ["Soybean",6,15,90,"10-20","9"],
+  ["Corn",3,50,150,"15-25","10"],
+  ["Potato (Irish)",1,150,150,"15-20","10"],
+  ["Sweetpotato",1,150,150,"5-10","30"],
+  ["Eggplant",1,6,6,"1-3","6"],
+  ["Okra",2,6,12,"2-5","6"],
+  ["Tomato",2,25,50,"3-5","+ 16.66666667"]
+];
+var MALA_SCENARIOS = [
+  ["How many Malas are necessary with the total crop yield for the State of Hawaii with a 2019 population of 1415872","1415872 / 765.4667 =","1849.684643"],
+  ["How many Malas are necessary with the total crop yield in the City & County of Honolulu with a 2019 population of 974563","974563 / 765.4667 =","1273.16186"],
+  ["If a person were to take home one of every crop, how many Malas are necessary for the State of Hawaii with a 2019 population of 1415872","1415872 / 25.516 =","55489.57517"],
+  ["If a person were to take home one of every crop, how many Malas are necessary in the City & County of Honolulu with a 2019 population of 974563","974563 / 25.516 =","38194.19188"],
+  ["How many people one Mala can feed if each person were to take home one of every crop","765.4667 / 30 =","25.516"]
+];
+function malaTypedHTML(){
+  var labels = ["Crop","# seeds per foot","Length of bed for crops","# crops per crop bed length","How much to plant per person","People one Mala can feed"];
+  var rows = MALA_CROPS.map(function(r){
+    return '<tr><td data-label="'+labels[0]+'">'+r[0]+'</td><td data-label="'+labels[1]+'">'+r[1]+'</td><td data-label="'+labels[2]+'">'+r[2]+'</td><td data-label="'+labels[3]+'">'+r[3]+'</td><td data-label="'+labels[4]+'">'+r[4]+'</td><td data-label="'+labels[5]+'">'+r[5]+'</td></tr>';
+  }).join('');
+  var cards = MALA_SCENARIOS.map(function(sc){
+    return '<div class="t-card"><p>'+sc[0]+'</p><span class="calc">'+sc[1]+'</span><span class="result">'+sc[2]+'</span></div>';
+  }).join('');
+  return '<section class="typed" aria-label="Retyped diagram: researching necessary quantity of the Malas in order to feed the Hawai\'i population">' +
+    '<p class="t-eyebrow">Printed pp. 31–32 · Retyped in large type</p>' +
+    '<h3>Researching Necessary Quanitty of the \u2018Malas\u2019 in Order to Feed the Hawai\u2019i Population</h3>' +
+    '<p class="t-intro">Calculating produce count of each Mala and how many necessary Mala\u2019s are needed to supply food security in Hawaii in the case of food shortage from external sources during covid.</p>' +
+    '<h4>Population Count in the State of Hawaii &amp; My Home City and County of Honolulu</h4>' +
+    '<div class="t-stats">' +
+      '<div class="t-stat"><span>State of Hawaii Population</span><strong>1415872 PEOPLE</strong></div>' +
+      '<div class="t-stat"><span>City &amp; County of Honolulu Population</span><strong>974563 PEOPLE</strong></div>' +
+    '</div>' +
+    '<h4>Crop Count — How Many People One Mala Can Feed</h4>' +
+    '<table><thead><tr><th>Crop</th><th># Seeds per Foot</th><th>Length of Bed for Crops</th><th># Crops per Crop Bed Length</th><th>How Much to Plant per Person (Results Intended to Last &amp; Preserve for a Year)</th><th>How Many People One Malas Can Feed (Set of Three Structures)</th></tr></thead>' +
+    '<tbody>'+rows+'</tbody>' +
+    '<tfoot><tr><td data-label="Total crops">Total Crops — 30 Count</td><td></td><td></td><td></td><td></td><td data-label="Total people">765.46667 PEOPLE</td></tr></tfoot></table>' +
+    '<h4>Mala Count Scenarios</h4>' +
+    '<div class="t-cards">'+cards+'</div>' +
+    '<p class="t-src">Retyped word for word and number for number from the printed spread, because the original table text is very small; the spread\u2019s original images — the population panel, the crop table, the plan rendering, the scenario cards and the fish-eye rendering — follow below on this same spread.</p>' +
+  '</section>';
+}
+
+/* ---------- Detroit — Thesis Prep Book ----------
+   The author's thesis prep book: the process, research and
+   development that led into Resuscitate Detroit — how she got
+   to the thesis, not the finished thesis itself. Shown on its
+   own spread immediately after Detroit's opening spread, in
+   two forms on the one spread: a looping GIF first, on top,
+   and the still flippable booklet beneath it, both flipping
+   through the same spreads in the same order.
+   Source: the author's own print PDF of the book
+   (THESIS_PREP_BOOK prints), 38 pages, used as printed —
+   clean and whole; the earlier sketchbook-photo pages are
+   superseded by these prints and are not mixed in.
+   Spread mapping (PDF page -> book spread), as corrected by
+   the author: the print PDF's blank first page (p.1) does
+   not exist in the real booklet and is NOT shown — not as a
+   spread, a GIF frame or a placeholder. The book opens with
+   its front cover and closes with its back cover:
+     Spread 1  = the front cover alone, p.3: Model T Ford
+       cars under the title “Fragmented Theatrical Detroit —
+       Thesis Prep”, Ellie Derwenskus, Richard Rosa, 2022–2023
+       (the very page the author supplied as the front cover)
+     Spreads 2–18 = the interior pairs in PDF order:
+       pp.4–5, 6–7, 8–9, 10–11, 12–13, 14–15, 16–17, 18–19,
+       20–21, 22–23, 24–25, 26–27, 28–29, 30–31, 32–33,
+       34–35, 36–37 (p.37, the last pair's right page, is the
+       book's concluding statement; printed folio 34)
+     Spread 19 = the credits page alone, p.38: the book's
+       bibliography (Books / Journals / Websites, in red) —
+       the last page before the back cover, as the author
+       directed; it appears here only, nowhere else
+     Spread 20 = the back cover alone, p.2: the period Ford
+       advertisement page — The Touring $290, The Runabout
+       $260, red diagonal stripes at the edges (the very page
+       the author supplied as the back cover)
+   Every page of the book (PDF pp.2–38) appears exactly once:
+   none dropped, none duplicated. The GIF and the booklet
+   beneath it use this same order, spread for spread, frame
+   for frame. Each paired spread is the two pages side by side,
+   left page on the left, with a soft centre gutter seam
+   where the binding falls — not a crop between the pages.
+   The Detroit collage is NOT a prep-book page: it is a
+   Detroit piece (flagged u:1) on the opening spread,
+   directly under the hero image. */
+var PREP_SPREADS = [
+  { src:"assets/img16.jpg", title:"Front cover · page 3", alt:"Thesis prep book front cover: vintage Model T Ford cars under the title “Fragmented Theatrical Detroit — Thesis Prep” in red, Ellie Derwenskus, Richard Rosa, 2022–2023" },
+  { src:"assets/img17.jpg", title:"Keywords · pages 4–5", alt:"Thesis prep book spread, pages 4 and 5: the Keywords pages — not focusing on the form or “skin” enclosures of a machine, but its intention, utility, internal movement and gut; destination architecture; dispersion; symbolic fragments; a machine capable of expression; experimentation; positive entropy" },
+  { src:"assets/img18.jpg", title:"Overview / Introduction · pages 6–7", alt:"Thesis prep book spread, pages 6 and 7: Overview / Introduction — the thesis proposal, goals and keywords, with Detroit postcard images, facing the introduction text" },
+  { src:"assets/img19.jpg", title:"Detroit's Historical Background · page 8 — page 9", alt:"Thesis prep book spread, pages 8 and 9: Detroit's Historical Background — Automobile and Wartime Efforts and Decline, with period car sketches — facing page 9" },
+  { src:"assets/img20.jpg", title:"Pages 10–11", alt:"Thesis prep book spread, pages 10 and 11" },
+  { src:"assets/img21.jpg", title:"Pages 12–13", alt:"Thesis prep book spread, pages 12 and 13" },
+  { src:"assets/img22.jpg", title:"Pages 14–15", alt:"Thesis prep book spread, pages 14 and 15" },
+  { src:"assets/img23.jpg", title:"Pages 16–17", alt:"Thesis prep book spread, pages 16 and 17" },
+  { src:"assets/img24.jpg", title:"Pages 18–19", alt:"Thesis prep book spread, pages 18 and 19" },
+  { src:"assets/img25.jpg", title:"Pages 20–21", alt:"Thesis prep book spread, pages 20 and 21" },
+  { src:"assets/img26.jpg", title:"Pages 22–23", alt:"Thesis prep book spread, pages 22 and 23" },
+  { src:"assets/img27.jpg", title:"Pages 24–25", alt:"Thesis prep book spread, pages 24 and 25" },
+  { src:"assets/img28.jpg", title:"Pages 26–27", alt:"Thesis prep book spread, pages 26 and 27" },
+  { src:"assets/img29.jpg", title:"Pages 28–29", alt:"Thesis prep book spread, pages 28 and 29" },
+  { src:"assets/img30.jpg", title:"Pages 30–31", alt:"Thesis prep book spread, pages 30 and 31" },
+  { src:"assets/img31.jpg", title:"Pages 32–33", alt:"Thesis prep book spread, pages 32 and 33" },
+  { src:"assets/img32.jpg", title:"Pages 34–35", alt:"Thesis prep book spread, pages 34 and 35" },
+  { src:"assets/img33.jpg", title:"Pages 36–37 · conclusion", alt:"Thesis prep book spread, pages 36 and 37 — page 37 is the book's concluding statement: atmospheric density that captures an energy and soul of a place / era, and Detroit as a destination that can be experienced within its fragmented infrastructure" },
+  { src:"assets/img34.jpg", title:"Credits · page 38", alt:"Thesis prep book credits page — the last page before the back cover: the book's bibliography of Books, Journals and Websites, printed in red" },
+  { src:"assets/img35.jpg", title:"Back cover · page 2", alt:"Thesis prep book back cover: a period Ford advertisement page — The Touring, $290, and The Runabout, $260 — with red diagonal stripes at the edges" }
+];
+var bkSpread = 0;
+function bookletHTML(pr){
+  var sp = PREP_SPREADS[bkSpread];
+  return '<header class="spread-head"><p class="sh-kick">Thesis Prep Book · Detroit</p>' +
+    '<h3>thesis preparation research booklet.</h3>' +
+    '<p class="sh-sub">Process behind Resuscitate Detroit: A look into Detroit\'s Automotive past and Central Michigan Station\'s History and State of Being, keywords that embody the project, Architectural Theorists and Illustrators References (such as Giovanni Battista Piranesi, Lebbeus Woods, Daniel Libeskind), and Push towards bringing attraction back to the city with Adaptive Reuse Interventions (A blend of Hotel, Cinematic, and Museum Architecture - Living amongst the history and potential of Detroit).</p></header>' +
+    '<div class="bk-gif"><p class="bk-gif-label">The same spreads, flipping on their own</p>' +
+      '<div class="bk-gif-frame"><img loading="lazy" src="assets/img36.gif" alt="Looping animation flipping through all twenty thesis prep book spreads in order, from the Model T Ford front cover, through the paired interior spreads and the credits page, to the Ford advertisement back cover" /></div></div>' +
+    '<div class="booklet">' +
+      '<div class="bk-stage" id="bkStage">' +
+        '<img id="bkImg" src="'+sp.src+'" alt="'+sp.alt.replace(/"/g,'&quot;')+'" />' +
+        '<button type="button" class="bk-nav bk-prev" id="bkPrev" aria-label="Previous book spread">‹</button>' +
+        '<button type="button" class="bk-nav bk-next" id="bkNext" aria-label="Next book spread">›</button>' +
+      '</div>' +
+      '<div class="bk-bar"><p class="bk-title" id="bkTitle">'+sp.title+'</p>' +
+      '<p class="bk-count" id="bkCount">Spread '+(bkSpread+1)+' of '+PREP_SPREADS.length+'</p></div>' +
+    '</div>' +
+    '<p class="spread-note">Thesis Prep Book — the complete book in '+PREP_SPREADS.length+' spreads: it opens with the Model T Ford front cover, then every interior page is paired with its neighbour in order, the centre seam showing where the binding falls; the credits page — the book&rsquo;s bibliography — stands alone as the last page before the back cover, the period Ford advertisement page. Turn to the next spread below to continue through the Detroit project.<span class="mono">SPREAD '+(cur.spread+1)+' OF '+cur.spreads.length+'</span></p>';
+}
+function bkShow(){
+  var img = document.getElementById("bkImg"); if (!img) return;
+  var sp = PREP_SPREADS[bkSpread];
+  img.src = sp.src; img.alt = sp.alt;
+  document.getElementById("bkTitle").textContent = sp.title;
+  document.getElementById("bkCount").textContent = "Spread "+(bkSpread+1)+" of "+PREP_SPREADS.length;
+  document.getElementById("bkPrev").disabled = (bkSpread === 0);
+  document.getElementById("bkNext").disabled = (bkSpread === PREP_SPREADS.length-1);
+}
+function bkGo(d){
+  bkSpread = Math.max(0, Math.min(bkSpread + d, PREP_SPREADS.length-1));
+  bkShow();
+}
+function wireBooklet(){
+  var prev = document.getElementById("bkPrev"), next = document.getElementById("bkNext");
+  if (!prev || !next) return;
+  prev.addEventListener("click", function(){ bkGo(-1); });
+  next.addEventListener("click", function(){ bkGo(1); });
+  document.getElementById("bkImg").addEventListener("click", openPrepLB);
+  var stage = document.getElementById("bkStage"), bx = null;
+  stage.addEventListener("touchstart", function(e){ bx = e.changedTouches[0].clientX; }, {passive:true});
+  stage.addEventListener("touchend", function(e){
+    if (bx === null) return;
+    var dx = e.changedTouches[0].clientX - bx;
+    if (Math.abs(dx) > 42) bkGo(dx < 0 ? 1 : -1);
+    bx = null;
+  }, {passive:true});
+  bkShow();
+}
+/* clicking the current book spread opens it in the lightbox,
+   stepped through the same twenty spreads */
+function openPrepLB(){
+  var pr = projById(cur.id); if (!pr) return;
+  lbList = PREP_SPREADS.map(function(sp){ return { src:sp.src, alt:sp.alt, title:sp.title, meta:"Thesis Prep Book · "+pr.title }; });
+  lbIdx = bkSpread; lastFocus = document.activeElement;
+  setLBZoom(false);
+  renderLB(); lb.hidden = false;
+  document.getElementById("lbClose").focus();
+  document.body.style.overflow = "hidden";
+}
+
+function buildSpreads(pr){
+  var spreads = [{ opening:true, pieces:[] }];
+  var plan = PLANS[pr.id];
+  if (plan){
+    plan.forEach(function(rows){
+      spreads.push({ opening:false, rows: rows.map(function(row){
+        var wide = row[0] === "wide";
+        var idxs = wide ? row.slice(1) : row;
+        return { layout: wide ? "wide" : row.length, items: idxs.map(function(i){ return { piece: pr.pieces[i], idx: i }; }) };
+      }) });
+    });
+    /* Detroit only: the Thesis Prep Book spread is spliced in
+       immediately after the opening spread (spread index 1),
+       ahead of every planned spread; no existing spread is
+       moved or removed. The three-drawings spread (pieces
+       47–49, side by side in one trio row) is then spliced in
+       immediately after it at index 2 — before the former
+       spread 3 — without replacing or editing the booklet
+       spread. The car-elements silhouette spread (pieces
+       51–52, side by side as a pair) is spliced in at index 4,
+       immediately after spread 4 (the wireframe-elevation
+       spread), becoming the new spread 5; every later spread
+       shifts down by one and no existing spread is replaced. */
+    if (pr.id === "detroit"){
+      spreads.splice(1, 0, { opening:false, booklet:true, rows:[] });
+      spreads.splice(2, 0, { opening:false, rows:[{ layout:3, items:[
+        { piece: pr.pieces[47], idx: 47 },
+        { piece: pr.pieces[48], idx: 48 },
+        { piece: pr.pieces[49], idx: 49 }
+      ] }] });
+      spreads.splice(4, 0, { opening:false, rows:[{ layout:2, items:[
+        { piece: pr.pieces[51], idx: 51 },
+        { piece: pr.pieces[52], idx: 52 }
+      ] }] });
+    }
+    return spreads;
+  }
+  var i = 0, k = 0;
+  while (i < pr.pieces.length){
+    var size = CHUNKS[k % CHUNKS.length]; k++;
+    var slice = pr.pieces.slice(i, i+size);
+    spreads.push({ opening:false, rows:[{ layout:size, items: slice.map(function(p, j){ return { piece:p, idx:i+j }; }) }] });
+    i += size;
+  }
+  return spreads;
+}
+
+var viewIndex = document.getElementById("viewIndex");
+var viewProject = document.getElementById("viewProject");
+var spreadBox = document.getElementById("spreadBox");
+
+function figureHTML(piece, idx){
+  return '<figure class="piece">' +
+    '<button type="button" class="open-piece" data-piece="'+idx+'" aria-label="Enlarge: '+piece.title.replace(/"/g,'&quot;')+'">' +
+      '<img loading="lazy" src="'+piece.src+'" alt="'+piece.alt.replace(/"/g,'&quot;')+'" />' +
+    '</button>' +
+    '<figcaption><span class="pn">'+(idx+1)+'</span>'+piece.title+' · '+piece.meta+(piece.note ? '<span class="fig-note">'+piece.note+'</span>' : '')+'</figcaption>' +
+  '</figure>';
+}
+
+function renderSpread(){
+  var pr = projById(cur.id);
+  var sp = cur.spreads[cur.spread];
+  document.getElementById("pbNum").textContent = pr.num;
+  document.getElementById("pbTitle").textContent = pr.title;
+  var nextPr = nextOf(pr);
+  document.getElementById("pbBack").disabled = (cur.spread === 0);
+  document.getElementById("pbNext").textContent = nextPr ? ("Next: "+nextPr.num+" ›") : "Index ›";
+  document.getElementById("pbSpreadLabel").textContent =
+    "Spread "+(cur.spread+1)+" of "+cur.spreads.length+" · "+pr.pieces.length+" pieces";
+  document.getElementById("pbPrevPage").disabled = (cur.spread === 0);
+  document.getElementById("pbNextPage").textContent =
+    (cur.spread === cur.spreads.length-1)
+      ? (nextPr ? "Next project ›" : "Back to index ›")
+      : "Next page ›";
+  /* bottom project numbers — only the current section's projects */
+  var nums = document.getElementById("pbNums");
+  nums.innerHTML = "";
+  secList(pr).forEach(function(p2){
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = p2.num;
+    if (p2.id === cur.id) b.setAttribute("aria-current","true");
+    b.setAttribute("aria-label","Go to "+secName(p2).toLowerCase()+" project "+p2.num+": "+p2.title);
+    b.addEventListener("click", function(){ openProject(p2.id, 0, true); });
+    nums.appendChild(b);
+  });
+  /* This bar follows the PROJECTS array order and each project's
+     num, so it shows the author's 01–09 sequence (see index note). */
+  var discHTML = pr.disclaimer ? '<span class="disc-line">'+pr.disclaimer+'</span>' : '';
+
+  if (sp.opening){
+    var heroIdx = 0;
+    for (var hi=0; hi<pr.pieces.length; hi++) if (pr.pieces[hi].src === pr.hero) heroIdx = hi;
+    /* a piece flagged "opening" (the Shell's programmatic distribution
+       diagram) is rendered on the opening spread itself, directly
+       beneath the main illustration in the same column, tight against
+       it — no separate caption line: the printed caption travels
+       inside the PDF cutout itself */
+    var openFig = '';
+    pr.pieces.forEach(function(p2, i2){
+      if (p2.opening) openFig = '<figure class="piece opening-diagram">' +
+        '<button type="button" class="open-piece" data-piece="'+i2+'" aria-label="Enlarge: '+p2.title.replace(/"/g,'&quot;')+'">' +
+          '<img loading="lazy" src="'+p2.src+'" alt="'+p2.alt.replace(/"/g,'&quot;')+'" />' +
+        '</button></figure>';
+    });
+    /* a piece flagged "underhero" (Detroit's collage) is rendered
+       in the same hero column, directly beneath the hero image,
+       as its own captioned piece */
+    var underFig = '';
+    pr.pieces.forEach(function(p2, i2){
+      if (p2.underhero) underFig = figureHTML(p2, i2);
+    });
+    /* a piece flagged "openfull" (the Shell's hurricane shutter
+       typology chart) is rendered full-width on the opening spread
+       itself, below the text & illustration — it shares the
+       portfolio's own first Shell page with the main illustration */
+    var openFull = '';
+    pr.pieces.forEach(function(p2, i2){
+      if (p2.openfull) openFull = '<div class="srow layout-wide opening-full">'+figureHTML(p2, i2)+'</div>';
+    });
+    /* projects whose whole piece list lives on the opening spread
+       (Jewelry — one spread only, like the PDF): render the extra
+       rows below the opening grid, in the order set in OPEN_EXTRA */
+    var openExtra = '';
+    var extraRows = (typeof OPEN_EXTRA !== "undefined" && OPEN_EXTRA[pr.id]) || null;
+    if (extraRows){
+      openExtra = extraRows.map(function(row){
+        var cls = row.length===2 ? "layout-pair" : row.length===1 ? "layout-single" : "layout-trio";
+        var figs = row.map(function(i2){ return figureHTML(pr.pieces[i2], i2); }).join('');
+        return '<div class="srow '+cls+' opening-full">'+figs+'</div>';
+      }).join('');
+    }
+    /* a project whose opening image carries a printed title of its
+       own (Chelsea's Soda Can Model, captioned in the portfolio on
+       pp.43–44) shows that title directly below the same image */
+    var heroCap = pr.heroCaption
+      ? '<p class="hero-cap"><span class="pn">'+(heroIdx+1)+'</span><b>'+pr.heroCaption+'</b></p>'
+      : '';
+    var singleSpread = (cur.spreads.length === 1);
+    spreadBox.innerHTML =
+      '<div class="opening">' +
+        '<div class="txt">' +
+          '<p class="pnum-small">'+secName(pr)+' · Project '+pr.num+' · '+pr.pieces.length+' pieces</p>' +
+          '<h2>'+pr.title.toLowerCase()+'.</h2>' +
+          '<p class="sub">'+pr.sub+'</p>' +
+          '<p class="meta">'+pr.meta+'</p>' +
+          (pr.keys ? '<p class="keys">'+pr.keys+'</p>' : '') +
+          (pr.details ? '<dl class="details">'+pr.details.map(function(d){ return '<div><dt>'+d[0]+'</dt><dd>'+d[1]+'</dd></div>'; }).join('')+'</dl>' : '') +
+          '<div class="blurb">'+pr.blurb.map(function(p){ return '<p>'+p+'</p>'; }).join('')+'</div>' +
+          (pr.disclaimer ? '<p class="disclaimer">'+pr.disclaimer+'</p>' : '') +
+          '<p class="bignum" aria-hidden="true">'+pr.num+'</p>' +
+        '</div>' +
+        '<div class="heroimg"><button type="button" class="open-piece" data-piece="'+heroIdx+'" aria-label="Enlarge the opening image of '+pr.title.replace(/"/g,'&quot;')+'">' +
+          '<img src="'+pr.hero+'" alt="Opening image for '+pr.title.replace(/"/g,'&quot;')+'" />' +
+        '</button>' + heroCap + openFig + underFig + '</div>' +
+      '</div>' +
+      openFull +
+      openExtra +
+      (singleSpread
+        ? '<p class="spread-note">'+discHTML+(pr.id === "etc"
+            ? 'Every piece in this project is on this one spread — all '+pr.pieces.length+' Etc. pieces together on the main page, each complete image kept whole.'
+            : 'Every piece in this project is on this one spread — as in the portfolio PDF, where Jewelry Making is a single spread — each complete image kept whole.')+'<span class="mono">SPREAD 1 OF 1</span></p>'
+        : '<p class="spread-note">'+discHTML+'Turn the page to walk through every piece in this project — renders, drawings, models, photos and diagrams, each complete image kept whole.<span class="mono">SPREAD 1 OF '+cur.spreads.length+'</span></p>');
+  } else if (sp.booklet) {
+    /* Detroit's Thesis Prep Book spread: the flippable
+       booklet and its flipping GIF, on their own spread */
+    spreadBox.innerHTML = bookletHTML(pr);
+    wireBooklet();
+  } else {
+    var rowsHTML = sp.rows.map(function(row){
+      var layoutClass = row.layout==="wide" ? "layout-wide" : row.layout===2 ? "layout-pair" : row.layout===4 ? "layout-grid4" : row.layout===1 ? "layout-single" : "layout-trio";
+      var figs = row.items.map(function(item){ return figureHTML(item.piece, item.idx); }).join('');
+      return '<div class="srow '+layoutClass+'">'+figs+'</div>';
+    }).join('');
+    var numsList = [];
+    sp.rows.forEach(function(row){ row.items.forEach(function(item){ numsList.push(item.idx+1); }); });
+    /* Mala spread 9 (spread index 8) is headed by the retyped,
+       legible version of its printed research diagram; the
+       spread's original images follow it on the same spread */
+    var typedHTML = (pr.id === "mala" && cur.spread === 8) ? malaTypedHTML() : '';
+    /* Detroit spread 3 only (the three side-by-side drawings, pieces
+       48–50): the bottom note carries the author's own wording only,
+       with no pieces-count prefix. Detroit spread 5 only (the
+       car-elements silhouette pair, pieces 52–53): the bottom note
+       is the author's caption for that spread, likewise with no
+       pieces-count prefix. Every other spread keeps the generic
+       wording and the count prefix unchanged. */
+    var isDetroitDrawings = (pr.id === "detroit" && cur.spread === 2);
+    var isDetroitSilhouette = (pr.id === "detroit" && cur.spread === 4);
+    var noteText = isDetroitDrawings
+      ? 'all images are explorations of what it means to take a language of a car within a pre-existing building. Juxtaposition between old (beaux arts style station) and new (automobile language).'
+      : isDetroitSilhouette
+      ? 'car elements as intervention silhouette study'
+      : 'each image is shown whole, exactly as it appears in the portfolio; tap any piece to see it larger.';
+    var countPrefix = (isDetroitDrawings || isDetroitSilhouette) ? '' : 'Pieces '+numsList.join(', ')+' of '+pr.pieces.length+' — ';
+    spreadBox.innerHTML =
+      spreadHeadHTML(pr) + typedHTML + rowsHTML +
+      '<p class="spread-note">'+discHTML+countPrefix+noteText+'<span class="mono">SPREAD '+(cur.spread+1)+' OF '+cur.spreads.length+'</span></p>';
+  }
+  spreadBox.classList.remove("fadein"); void spreadBox.offsetWidth; spreadBox.classList.add("fadein");
+  spreadBox.querySelectorAll(".open-piece").forEach(function(btn){
+    btn.addEventListener("click", function(){ openLB(parseInt(btn.getAttribute("data-piece"),10)); });
+  });
+  window.scrollTo(0,0);
+}
+
+function openProject(id, spread, push){
+  curSec = projById(id).sec;
+  cur.id = id; cur.spreads = buildSpreads(projById(id)); cur.sparchived = 0;
+  bkSpread = 0;
+  cur.spread = Math.min(spread||0, cur.spreads.length-1);
+  viewIndex.hidden = true; viewProject.hidden = false;
+  renderSpread();
+  if (push){ try{ history.pushState({p:id,s:cur.spread},"", "#"+id+"/"+cur.spread); }catch(e){} }
+}
+function gotoSpread(n){
+  cur.spread = Math.max(0, Math.min(n, cur.spreads.length-1));
+  renderSpread();
+  try{ history.replaceState({p:cur.id,s:cur.spread},"", "#"+cur.id+"/"+cur.spread); }catch(e){}
+}
+function showIndex(push){
+  cur.id = null; viewProject.hidden = true; viewIndex.hidden = false;
+  applySection(curSec, false);
+  window.scrollTo(0,0);
+  if (push){ try{ history.pushState({},"", curSec === "work" ? "#work" : "#school"); }catch(e){} }
+}
+function nextPageOrProject(){
+  if (cur.spread < cur.spreads.length-1){ gotoSpread(cur.spread+1); return; }
+  var nx = nextOf(projById(cur.id));
+  if (nx) openProject(nx.id, 0, true); else showIndex(true);
+}
+document.getElementById("pbHome").addEventListener("click", function(){ showIndex(true); });
+document.getElementById("homeLink").addEventListener("click", function(e){ e.preventDefault(); showIndex(true); });
+
+/* Header email: a bare mailto: click does nothing visible inside the
+   app shell, so the envelope instead reveals the address in a small
+   panel — the address itself is the mailto link, with a Copy button
+   beside it. */
+var mailToggle = document.getElementById("mailToggle");
+var mailPop = document.getElementById("mailPop");
+function closeMailPop(){
+  mailPop.hidden = true;
+  mailToggle.setAttribute("aria-expanded", "false");
+}
+mailToggle.addEventListener("click", function(e){
+  e.preventDefault();
+  var show = mailPop.hidden;
+  mailPop.hidden = !show;
+  mailToggle.setAttribute("aria-expanded", show ? "true" : "false");
+});
+document.addEventListener("click", function(e){
+  if (!mailPop.hidden && !e.target.closest(".icons")) closeMailPop();
+});
+document.addEventListener("keydown", function(e){
+  if (e.key === "Escape" && !mailPop.hidden) closeMailPop();
+});
+var mailCopyBtn = document.getElementById("mailCopy");
+mailCopyBtn.addEventListener("click", function(){
+  function copied(){
+    mailCopyBtn.textContent = "Copied";
+    setTimeout(function(){ mailCopyBtn.textContent = "Copy"; }, 1600);
+  }
+  var addr = "elliederwenskus@gmail.com";
+  if (navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(addr).then(copied, copied);
+  } else {
+    var ta = document.createElement("textarea");
+    ta.value = addr; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); } catch (err) {}
+    document.body.removeChild(ta);
+    copied();
+  }
+});
+function prevPage(){ if (cur.spread > 0) gotoSpread(cur.spread-1); }
+document.getElementById("pbNext").addEventListener("click", nextPageOrProject);
+document.getElementById("pbNextPage").addEventListener("click", nextPageOrProject);
+document.getElementById("pbBack").addEventListener("click", prevPage);
+document.getElementById("pbPrevPage").addEventListener("click", prevPage);
+window.addEventListener("popstate", function(){ route(false); });
+function route(){
+  var h = (location.hash||"").replace(/^#\/?/, "");
+  if (!h){ curSec = "school"; showIndex(false); return; }
+  if (h === "work"){ curSec = "work"; showIndex(false); return; }
+  if (h === "school"){ curSec = "school"; showIndex(false); return; }
+  var parts = h.split("/"); var pr = projById(parts[0]);
+  if (pr){ openProject(pr.id, parseInt(parts[1]||"0",10)||0, false); }
+  else showIndex(false);
+}
+
+/* ---------- lightbox ---------- */
+var lb = document.getElementById("lightbox");
+var lbImg = document.getElementById("lbImg");
+var lbZoomBtn = document.getElementById("lbZoom");
+var lbList = [], lbIdx = 0, lastFocus = null;
+/* The viewer always opens (and steps) in the fully-fitted view.
+   Zooming to actual size happens only when the reader taps Zoom,
+   and tapping Fit always returns to the whole image in the viewport. */
+function setLBZoom(on){
+  lb.classList.toggle("is-zoomed", !!on);
+  lbZoomBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  lbZoomBtn.textContent = on ? "Fit" : "Zoom";
+  if (!on){
+    var st = document.getElementById("lbStage");
+    st.scrollTop = 0; st.scrollLeft = 0;
+  }
+}
+lbZoomBtn.addEventListener("click", function(){ setLBZoom(!lb.classList.contains("is-zoomed")); });
+lbImg.addEventListener("dblclick", function(){ setLBZoom(!lb.classList.contains("is-zoomed")); });
+function openLB(i){
+  var pr = projById(cur.id); if (!pr) return;
+  lbList = pr.pieces; lbIdx = i; lastFocus = document.activeElement;
+  setLBZoom(false);
+  renderLB(); lb.hidden = false;
+  document.getElementById("lbClose").focus();
+  document.body.style.overflow = "hidden";
+}
+function renderLB(){
+  var pr = projById(cur.id); var it = lbList[lbIdx];
+  lbImg.src = it.src; lbImg.alt = it.alt;
+  document.getElementById("lbProj").textContent = secName(pr)+" · "+pr.num+" · "+pr.title;
+  document.getElementById("lbCount").textContent = (lbIdx+1)+" / "+lbList.length;
+  document.getElementById("lbTitle").textContent = it.title;
+  document.getElementById("lbMeta").textContent = it.meta + (it.note ? " — "+it.note : "");
+}
+function stepLB(d){ lbIdx = (lbIdx + d + lbList.length) % lbList.length; setLBZoom(false); renderLB(); }
+function closeLB(){
+  setLBZoom(false);
+  lb.hidden = true; document.body.style.overflow = "";
+  if (lastFocus && lastFocus.focus) lastFocus.focus();
+}
+document.getElementById("lbClose").addEventListener("click", closeLB);
+document.getElementById("lbPrev").addEventListener("click", function(){ stepLB(-1); });
+document.getElementById("lbNext").addEventListener("click", function(){ stepLB(1); });
+lb.addEventListener("click", function(e){ if (e.target === lb) closeLB(); });
+var tx = null;
+document.getElementById("lbStage").addEventListener("touchstart", function(e){ tx = e.changedTouches[0].clientX; }, {passive:true});
+document.getElementById("lbStage").addEventListener("touchend", function(e){
+  if (tx === null) return;
+  var dx = e.changedTouches[0].clientX - tx;
+  if (Math.abs(dx) > 42) stepLB(dx < 0 ? 1 : -1);
+  tx = null;
+}, {passive:true});
+
+document.addEventListener("keydown", function(e){
+  if (!lb.hidden){
+    if (e.key === "Escape") closeLB();
+    else if (e.key === "ArrowRight") stepLB(1);
+    else if (e.key === "ArrowLeft") stepLB(-1);
+    else if (e.key === "z" || e.key === "Z") setLBZoom(!lb.classList.contains("is-zoomed"));
+    else if (e.key === "f" || e.key === "F") setLBZoom(false);
+    return;
+  }
+  if (cur.id){
+    /* on the Thesis Prep Book spread the arrow keys flip the
+       booklet's spreads; the page bar below still moves spreads */
+    var onBooklet = !!(cur.spreads[cur.spread] && cur.spreads[cur.spread].booklet);
+    if (onBooklet && e.key === "ArrowRight") bkGo(1);
+    else if (onBooklet && e.key === "ArrowLeft") bkGo(-1);
+    else if (e.key === "ArrowRight") nextPageOrProject();
+    else if (e.key === "ArrowLeft" && cur.spread > 0) gotoSpread(cur.spread-1);
+    else if (e.key === "Escape") showIndex(true);
+  }
+});
+
+route();
+</script>
+</body>
+</html>
